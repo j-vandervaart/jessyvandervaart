@@ -30,7 +30,7 @@
         },
         created: function() {
             var vm = this;
-            axios.get('http://localhost:8080/api/work').then(function(response) {
+            axios.get('api/work').then(function(response) {
                 console.log(response);
                 vm.works = response.data;
             });
