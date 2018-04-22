@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mailer = require('nodemailer');
 var cors = require('cors');
+var config = require('./config/database');
 
 // var index = require('./routes/index');
 // var users = require('./routes/users');
