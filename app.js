@@ -13,12 +13,14 @@ var cors = require('cors');
 var routes = require('./routes/routes');
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/portfoliodb', function(err) {
-	if(err) {
-		console.log('Connection Error', err);
-	}else {
-		console.log('Connection is good');
-	}
+mongoose.connect(config.database, { useMongoClient: true});
+// On Connection
+mongoose.connection.on('connected', () => {
+  console.log('Connected to Database '+config.database);
+});
+// On Error
+mongoose.connection.on('error', (err) => {
+  console.log('Database error '+err);
 });
 
 var app = express();
