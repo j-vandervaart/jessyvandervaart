@@ -14,7 +14,7 @@ var config = require('./config/database');
 var routes = require('./routes/routes');
 
 var mongoose = require('mongoose');
-mongoose.connect(config.database, { useMongoClient: true});
+mongoose.connect(config.database);
 // On Connection
 mongoose.connection.on('connected', () => {
   console.log('Connected to Database '+config.database);
