@@ -1,0 +1,629 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+header{
+	height: 20vh;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition-property: opacity;
+  transition-duration: .4s;
+}
+
+.fade-enter-active {
+  transition-delay: .4s;
+}
+
+.fade-enter, .fade-leave-active {
+  opacity: 0
+}
+
+.fade-input-enter-active, .fade-input-leave-active {
+  transition-property: opacity;
+  transition-duration: .15s;
+}
+
+.fade-input-enter-active {
+  transition-delay: .15s;
+}
+
+.fade-input-enter, .fade-input-leave-active {
+  opacity: 0;
+}
+
+/*WORK*/
+
+#headerDiv {
+	display: block;
+}
+
+#logoImage {
+	width: 50px;
+	height: 50px;
+	margin: 0 auto;
+	padding-top: 20px;
+	display: block;
+}
+
+#logoText {
+	font-family: "Open Sans";
+	margin-top: 25px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.splash {
+	display: flex;
+	justify-content: space-around;
+	height: 80vh;
+	min-height: 558.6px;
+}
+
+hr {
+	display: none;
+}
+
+.mainNav {
+	width: 0;
+	height: 100vh;
+	background-color: white;
+	box-shadow: 0px -5px 10px #cecece;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transition: width 1s ease;
+	overflow-x: hidden;
+}
+
+.slide {
+	width: 200px;
+	transition: width 1s ease;
+}
+
+#hamburger {
+	width: 30px;
+	height: auto;
+	position: absolute;
+	top: 15px;
+	right: 10px;
+	z-index: 1;
+}
+
+.mainLinks {
+	display: block;
+	margin-left: 20px;
+	font-family: 'PT Sans';
+	text-decoration: none;
+	color: #1f1f1f;
+	opacity: .9;
+	padding-top: 15px;
+	position: relative;
+}
+
+.menuChange {
+	opacity: 1;
+}
+
+.mainHdg {
+	font-family: Century;
+	font-size: 2.5em;
+	letter-spacing: 3px;
+}
+
+#mainDesc {
+	margin-top: 10%;
+	font-family: Open Sans;
+	font-size: 14px;
+}
+
+#workPrompt {
+	margin-top: 10%;
+	font-family: Open Sans;
+	font-size: 14px;
+}
+
+#headerCopy {
+	width: 80%;
+	margin: 0 auto;
+	padding-top: 20%;
+}
+
+.mainSec {
+    height:100%;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+#myWorkButton {
+	/*margin: 0 auto;*/
+	margin-top: 20%;
+	font-family: Open Sans;
+	font-size: 14px;
+	border: solid 2px #91CCC8;
+	width: 120px;
+	height: 35px;
+	text-align: center;
+	padding-top: 5px;
+	cursor: pointer;
+}
+
+#myWorkButton:hover {
+	background-color: #91CCC8;
+	color: white;
+	transition: all .5s ease;
+}
+
+#character {
+	width: 50%;
+	height: auto;
+}
+
+#characterDiv {
+	display: none;
+	margin-top: 10%;
+	width: 35%;
+}
+
+@media screen and (min-width: 769px) {
+	#headerDiv {
+		display: flex;
+	}
+
+	#logoImage {
+		width: 30px;
+		height: 30px;
+		margin-top: 20px;
+		margin-left: 15px;
+		padding: 0;
+		display: block;
+	}
+
+	#logoText {
+		font-family: "Open Sans";
+		flex-grow: 1;
+		margin-top: 25px;
+		margin-left: 15px;
+		text-align: left;
+	}
+
+	#hamburger {
+		display: none;
+	}
+
+	hr {
+		opacity: 1;
+		margin-left: 59px;
+		margin-right: 50px;
+		margin-top: 14px;
+		border-style: solid;
+		border-width: .25px;
+		color: #91CCC8;
+		display: block;
+	}
+
+	.mainNav {
+		padding-top: 0;
+		margin-top: 15px;
+		margin-right: 50px;
+		width: auto;
+		background-color: white;
+		height: auto;
+		box-shadow: 0px 0px;
+	}
+
+	.mainLinks {
+		display: inline-block;
+		margin-left: 55px;
+		font-family: 'PT Sans';
+		text-decoration: none;
+		color: #1f1f1f;
+	}
+
+	.menuChange {
+		opacity: 1;
+	}
+
+	.mainHdg {
+		font-family: Century;
+		font-size: 3.5em;
+		letter-spacing: 3px;
+	}
+
+	#mainDesc {
+		margin-top: 8%;
+		font-family: Open Sans;
+		font-size: 20px;
+	}
+
+	#headerCopy {
+		width: 35.4166666667%;
+		padding-top: 5%;
+		/*margin-top: %;*/
+	    /*margin-left: 10%;*/
+	}
+
+	.mainSec {
+	    width: 90%;
+	    margin: 0 auto;
+	    margin-bottom: 200px;
+	}
+
+	#myWorkButton {
+		margin-top: 8%;
+		font-family: Open Sans;
+		font-size: 16px;
+		border: solid 2px #91CCC8;
+		width: 150px;
+		height: 30px;
+		text-align: center;
+		padding-top: 5px;
+		cursor: pointer;
+	}
+
+	#myWorkButton:hover {
+		background-color: #91CCC8;
+		color: white;
+		transition: all .5s ease;
+	}
+
+	#character {
+		width: 50%;
+		height: auto;
+	}
+
+	#characterDiv {
+		display: block;
+		margin-top: 4%;
+		width: 35%;
+	}
+}
+
+/*ABOUT*/
+
+#contactQ {
+	margin-top: 10%;
+	font-family: Open Sans;
+	font-size: 14px;
+	line-height: 25px;
+}
+
+#messageHail {
+	margin-top: 13%;
+	font-family: Open Sans;
+	font-size: 14px;
+}
+
+.header {
+	width: 80%;
+	margin: 0 auto;
+	/*margin-top: 2%;*/
+}
+
+.mainHdgContact {
+	font-family: Century;
+	font-size: 2em;
+	letter-spacing: 3px;
+}
+
+label {
+	display: block;
+	font-family: Open Sans;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+#formDiv {
+	padding-top: 5%;
+	width: 80%;
+	margin: 0 auto;
+}
+
+#formDiv p {
+	font-family: Open Sans;
+	color: #69bcb7;
+	padding-top: 10px;
+}
+
+#submit {
+	display: block;
+	background-color: white;
+	border: solid 1px #4D4B4B;
+	width: 70px;
+	height: 30px;
+	font-family: Open Sans;
+	margin-top: 10px;
+}
+
+#name, #email {
+	width: 100%;
+	border: none;
+	border-bottom: solid 1px #4D4B4B;
+}
+
+textarea {
+	width: 100%;
+	border: solid 1px #4D4B4B;
+}
+
+@media screen and (min-width: 769px) {
+	.header {
+		width: 30%;
+		margin-top: 5%;
+	}
+
+	#formDiv {
+		padding: 0;
+		margin-top: 4%;
+		width: 35%;
+	}
+
+	#contactQ {
+		margin-top: 5%;
+		font-size: 18px;
+	}
+}
+
+/* ABOUT */
+
+.headerAbout {
+	width: 80%;
+	/*margin: 0 auto;*/
+	margin-top: 5%;
+}
+
+.aboutBlurb {
+	font-family: Open Sans;
+	margin-top: 20px;
+	line-height: 25px;
+}
+
+#skills {
+	width: 80%;
+	/*margin: 0 auto;*/
+	margin-top: 12%;
+	height: auto;
+}
+
+.skillsHdg {
+	font-family: Century;
+	font-size: 18px;
+	margin-bottom: 5px;
+}
+
+.skillsLi {
+	font-family: Open Sans;
+	list-style: none;
+	margin-top: 10px;
+	font-size: 12px;
+}
+
+#list1 {
+	width: 50%;
+	float: left;
+}
+
+#list2 {
+	width: 50%;
+	float: right;
+}
+
+#edu {
+	width: 80%;
+	/*margin: 0 auto;*/
+	margin-top: 4%;
+}
+
+.indEdu {
+	width: 100%;
+	margin-bottom: 8%;
+	/*margin-top: 20px;*/
+}
+
+.schoolName {
+	margin-top: 10px;
+	font-family: PT Sans;
+	font-size: 16px;
+	font-weight: 600;
+	color: #6f9693;
+}
+
+.progName {
+	margin-top: 10px;
+	font-family: Open Sans;
+	font-size: 14px;
+}
+
+.degreeName {
+	margin-top: 10px;
+	font-family: Open Sans;
+	font-size: 14px;
+}
+
+@media screen and (min-width: 769px) {
+	#skills {
+		padding: 0;
+		margin-top: 5%;
+		width: 20%;
+	}
+
+	.headerAbout {
+		width: 40%;
+		margin-top: 5%;
+	}
+
+	#list1 {
+		width: 100%;
+	}
+
+	#list2 {
+		width: 100%;
+	}
+
+	#edu {
+		/*clear: both;*/
+	} 
+
+	.eduGroup {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.indEdu {
+		width: 20%;
+	}
+}
+
+/* Work List */
+
+#workListCont {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#workListCont a {
+	display: block;
+	width: 100%;
+	text-decoration: none;
+	color: black;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.03);
+}
+
+.workListDivs {
+	width: 100%;
+	/*height: 450px;*/
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.workListImgs {
+	width: 100%;
+	height: 225px;
+	background-size: cover;
+	background-position: center;
+}
+
+.workListContent {
+	width: 100%;
+	height: 200px;
+}
+
+.workListContent h2 {
+	text-align: center;
+	padding-top: 30px;
+	font-family: 'Century';
+	font-weight: 200;
+	text-transform: uppercase;
+}
+
+.workListContent p {
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 30px;
+	font-family: 'Open Sans';
+	font-weight: 200;
+	font-size: 15px;
+}
+
+@media screen and (min-width: 768px) {
+	#workListCont a {
+		width: 100%;
+	}
+
+	.workListImgs {
+		width: 50%;
+		height: 300px;
+		background-size: cover;
+		background-position: center;
+	}
+
+	.workListContent {
+		width: 50%;
+		height: 300px;
+	}
+
+	.workListContent h2 {
+		padding-top: 50px;
+		word-spacing: 5px;
+		line-height: 35px;
+	}
+
+	.workListContent p {
+		padding-top: 40px;
+		font-size: 17px;
+		width: 70%;
+		line-height: 28px;
+	}
+}
+
+@media screen and (min-width: 1025px) {
+	#workListCont a {
+		display: block;
+		width: 50%;
+	}
+
+	.workListImgs {
+		width: 50%;
+		height: 300px;
+		background-size: cover;
+		background-position: center;
+	}
+
+	.workListContent {
+		width: 50%;
+		height: 300px;
+	}
+
+	.workListContent h2 {
+		padding-top: 50px;
+		word-spacing: 5px;
+		line-height: 35px;
+	}
+
+	.workListContent p {
+		padding-top: 40px;
+		font-size: 17px;
+		width: 70%;
+		line-height: 28px;
+	}
+}
+
+/* Footer */
+
+footer {
+	height: 25vh;
+	min-height: 150px;
+}
+
+footer div {
+	width: 300px;
+	margin: 0 auto;
+}
+
+footer img {
+	padding-top: 50px;
+	width: 40px;
+	display: block;
+	margin: 0 auto;
+}
+
+footer p {
+	font-family: Segoe UI;
+	text-align: center;
+	padding-top: 15px;
+	font-size: 13px;
+	opacity: .8;
+}
+
+footer p:last-child {
+	margin-bottom: 20px;
+}
