@@ -1,7 +1,7 @@
 <template>
 
 <section>
-    <div class="workHeaderImg" v-bind:style="{ 'background-image': 'url(./images/' + work.proj_id + '.jpg)' }"></div>
+    <div class="workHeaderImg" v-bind:style="{ 'background-image': 'url(work/images/' + work.proj_id + '.jpg)' }"></div>
     <div class="indWorkCont">
       <div class="workTitleDiv">
         <h2>{{work.project_name}}</h2>
@@ -25,7 +25,7 @@
         </div>
       </div>
       <div class="mockupDiv">
-        <img v-bind:src="`images/${work.proj_id}-mockup.png`" alt="">
+        <img v-bind:src="`work/images/${work.proj_id}-mockup.png`" alt="">
       </div>
       <div class="forwardDiv">
         <router-link v-on:click.native="goBack" v-bind:key="work._id" :to="`${work.proj_id}`"><div>Previous Project</div></router-link>
