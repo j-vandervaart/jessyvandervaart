@@ -25,7 +25,7 @@
         </div>
       </div>
       <div class="mockupDiv">
-        <img v-bind:src="`/images/${work.proj_id}-mockup.png`" alt="">
+        <img v-if="work.proj_id != 'undefined'" v-bind:src="`/images/${work.proj_id}-mockup.png`" alt="">
       </div>
       <div class="forwardDiv">
         <router-link v-on:click.native="goBack" v-bind:key="work._id" :to="`${work.proj_id}`"><div>Previous Project</div></router-link>
