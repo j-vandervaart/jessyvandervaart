@@ -14,11 +14,13 @@
             			<p class="skillsLi">CSS3</p>
             			<p class="skillsLi">JAVASCRIPT</p>
             			<p class="skillsLi">PHP</p>
+                        <p class="skillsLi">LARAVEL</p>
             		</div>
             		<div id="list2">
-	            		<p class="skillsLi">LARAVEL</p>
+	            		<p class="skillsLi">MongoDB</p>
 	            		<p class="skillsLi">VUE JS</p>
 	            		<p class="skillsLi">NODE JS</p>
+                        <p class="skillsLi">Flexbox</p>
 	            		<p class="skillsLi">BOOTSTRAP</p>
 	            	</div>
             	</div>

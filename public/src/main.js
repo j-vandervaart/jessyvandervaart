@@ -12,10 +12,6 @@ Vue.use(VueRouter);
 const routes = [
 	{
 		path: '/',
-		redirect: '/work'
-	},
-	{
-		path: '/work',
 		component: Works
 	},
 	{
@@ -33,7 +29,11 @@ const routes = [
 ];
 
 const router = new VueRouter({
-	routes: routes
+	routes: routes,
+	scrollBehavior (to, from, savedPosition) {
+  		return { x: 0, y: 0 }
+	},
+	mode: 'history'
 });
 
 new Vue({

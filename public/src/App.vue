@@ -7,7 +7,7 @@
             <nav>
               <img id="hamburger" src="images/hamburger.svg" alt="Hamburger Menu">
               <ul class="mainNav">
-                <router-link class="mainLinks" id="workNav" :to="`/work`">Work</router-link>
+                <router-link class="mainLinks" id="workNav" :to="`/`">Work</router-link>
                 <router-link class="mainLinks" id="aboutNav" :to="`/about`">About</router-link>
                 <router-link class="mainLinks" id="contactNav" :to="`/contact`">Contact</router-link>
               </ul>
@@ -30,7 +30,7 @@
         },
         created: function() {
             var vm = this;
-            axios.get('/api/work').then(function(response) {
+            axios.get('http://localhost:3000/api/work').then(function(response) {
                 console.log(response);
                 vm.works = response.data;
             });

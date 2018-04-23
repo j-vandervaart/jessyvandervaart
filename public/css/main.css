@@ -5,7 +5,7 @@
 }
 
 header{
-	height: 20vh;
+	height: 10vh;
 }
 
 .fade-enter-active, .fade-leave-active {
@@ -58,7 +58,7 @@ header{
 .splash {
 	display: flex;
 	justify-content: space-around;
-	height: 80vh;
+	height: 90vh;
 	min-height: 558.6px;
 }
 
@@ -128,7 +128,7 @@ hr {
 #headerCopy {
 	width: 80%;
 	margin: 0 auto;
-	padding-top: 20%;
+	padding-top: 30%;
 }
 
 .mainSec {
@@ -243,7 +243,7 @@ hr {
 
 	#headerCopy {
 		width: 35.4166666667%;
-		padding-top: 5%;
+		padding-top: 10%;
 		/*margin-top: %;*/
 	    /*margin-left: 10%;*/
 	}
@@ -279,7 +279,7 @@ hr {
 
 	#characterDiv {
 		display: block;
-		margin-top: 4%;
+		margin-top: 10%;
 		width: 35%;
 	}
 }
@@ -302,7 +302,7 @@ hr {
 .header {
 	width: 80%;
 	margin: 0 auto;
-	/*margin-top: 2%;*/
+	margin-top: 20%;
 }
 
 .mainHdgContact {
@@ -357,12 +357,12 @@ textarea {
 @media screen and (min-width: 769px) {
 	.header {
 		width: 30%;
-		margin-top: 5%;
+		margin-top: 8%;
 	}
 
 	#formDiv {
 		padding: 0;
-		margin-top: 4%;
+		margin-top: 8%;
 		width: 35%;
 	}
 
@@ -377,7 +377,7 @@ textarea {
 .headerAbout {
 	width: 80%;
 	/*margin: 0 auto;*/
-	margin-top: 5%;
+	margin-top: 20%;
 }
 
 .aboutBlurb {
@@ -451,13 +451,13 @@ textarea {
 @media screen and (min-width: 769px) {
 	#skills {
 		padding: 0;
-		margin-top: 5%;
+		margin-top: 8%;
 		width: 20%;
 	}
 
 	.headerAbout {
 		width: 40%;
-		margin-top: 5%;
+		margin-top: 8%;
 	}
 
 	#list1 {
@@ -469,7 +469,7 @@ textarea {
 	}
 
 	#edu {
-		/*clear: both;*/
+		margin-top: 0;
 	} 
 
 	.eduGroup {
@@ -520,7 +520,7 @@ textarea {
 	text-align: center;
 	padding-top: 30px;
 	font-family: 'Century';
-	font-weight: 200;
+	font-weight: 100;
 	text-transform: uppercase;
 }
 
@@ -626,4 +626,155 @@ footer p {
 
 footer p:last-child {
 	margin-bottom: 20px;
+}
+
+/* Individual Work */
+
+.workHeaderImg {
+	width: 100%;
+	height: 200px;
+	margin-top: 40px;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.workTitleDiv {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.workTitleDiv h2 {
+	/*text-align: center;*/
+	text-transform: uppercase;
+	font-family: Century;
+	font-weight: 100;
+	padding-top: 20px;
+}
+
+.workContDiv {
+	width: 100%;
+	margin: 0 auto;
+	margin-top: 15px;
+}
+
+.workContDiv h3 {
+	font-family: Open Sans;
+	font-weight: 500;
+	font-size: 18px;
+	color: #69bcb7;
+}
+
+.workContDiv p {
+	font-family: Open Sans;
+	font-size: 15px;
+	padding-top: 8px;
+	font-weight: 350;
+	line-height: 25px;
+}
+
+.workContDiv h5 {
+	font-family: Open Sans;
+	font-weight: 500;
+	font-size: 16px;
+	color: #69bcb7;
+	padding-top: 15px;
+}
+
+#techPs {
+	font-size: 14px;
+}
+
+.mockupDiv {
+	width: 100%;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+.mockupDiv img {
+	width: 100%;
+}
+
+.forwardDiv {
+	padding-top: 40px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	padding-bottom: 30px;
+}
+
+.forwardDiv a {
+	text-decoration: none;
+	color: #69bcb7;
+	font-family: Open Sans;
+}
+
+.indWorkCont {
+	width:85%;
+	margin: 0 auto;
+}
+
+@media screen and (min-width: 1025px) {
+
+	.workTitleDiv {
+		margin-bottom: 50px;
+	}
+
+	.workHeaderImg {
+		width: 70%;
+		height: 400px;
+		margin: 0 auto;
+		margin-top: 40px;
+		background-size: cover;
+	}
+
+	.indWorkCont {
+		width: 70%;
+	}
+
+	#broadText {
+		width: 70%;
+		float: right;
+	}
+
+	#objectiveText {
+		width: 30%;
+		margin-right: 15%;
+		float: right;
+		margin-top: 150px;
+	}
+
+	#techText {
+		float: left;
+		width: 20%;
+	}
+
+	#projText {
+		margin-top: 20px;
+	}
+
+	.workContDiv h5 {
+		padding-top: 0;
+	}
+
+	.forwardDiv {
+		margin-bottom: 60px;
+	}
+
+	.mockupDiv {
+		width: 50%;
+		float: left;
+		margin-top: 60px;
+		margin-bottom: 50px;
+	}
+
+	.mockupDiv img {
+		width: 100%;
+	}
+
+	.workTitleDiv h2 {
+		font-size: 30px;
+	}
+
 }
