@@ -139,6 +139,7 @@ hr {
     flex-wrap: wrap;
     justify-content: space-around;
 	height: 90vh;
+	min-height: 558.6px;
 }
 
 #myWorkButton {
@@ -241,10 +242,6 @@ hr {
 		font-size: 20px;
 	}
 
-	#headerCopy {
-		width: 35.4166666667%;
-	}
-
 	.mainSec {
 	    width: 90%;
 	    margin: 0 auto;
@@ -272,11 +269,17 @@ hr {
 		width: 50%;
 		height: auto;
 	}
+}
 
+@media screen and (min-width: 1024px) {
 	#characterDiv {
 		display: block;
 		align-self: center;
 		width: 35%;
+	}
+
+	#headerCopy {
+		width: 35.4166666667%;
 	}
 }
 
@@ -351,10 +354,16 @@ textarea {
 	border: solid 1px #4D4B4B;
 }
 
+@media screen and (min-width: 768px) {
+	.header {
+		margin-top: 8%;
+	}
+}
+
 @media screen and (min-width: 769px) {
 	.header {
 		width: 30%;
-		margin-top: 0;
+		margin-top: 10px;
 		height: 450px;
 	}
 
@@ -363,6 +372,7 @@ textarea {
 		width: 35%;
 		align-self: center;
 		height: 450px;
+		margin-top: 10px;
 	}
 
 	#contactQ {
@@ -424,6 +434,11 @@ textarea {
 	margin-bottom: 8%;
 }
 
+.eduGroup {
+	width: 100%;
+	display: block;
+}
+
 .schoolName {
 	margin-top: 10px;
 	font-family: PT Sans;
@@ -444,7 +459,27 @@ textarea {
 	font-size: 14px;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 767px) {
+	.indEdu {
+		width: 30%;
+	}
+
+	.eduGroup {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.headerAbout {
+		margin-top: 8%;
+	}
+
+	.skillsHdg {
+		margin-top: 20px;
+	}
+}
+
+@media screen and (min-width: 1025px) {
 	#skills {
 		padding: 0;
 		width: 20%;
@@ -466,22 +501,25 @@ textarea {
 	}
 
 	#edu {
-		margin-top: 0;
+		margin-top: 20px;
 	} 
 
 	.eduGroup {
-		display: flex;
-		flex-wrap: wrap;
-	}
-
-	.indEdu {
-		width: 20%;
-	}
-
-	.skillsHdg {
-		margin-top: 0;
+		width: 70%;
 	}
 }
+
+@media screen and (min-width: 1200px) {
+	.eduGroup {
+		width: 60%;
+	}
+}
+
+/*@media screen and (min-width: 1024px) {
+	.eduGroup {
+		width: 50%;
+	}
+}*/
 
 /* Work List */
 
