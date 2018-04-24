@@ -20,7 +20,7 @@
                     </transition>
                     <label for="message">Message:</label>
                     <textarea name="message" id="message" v-model="Email.message" cols="30" rows="10"></textarea>
-                    <input id="submit" type="submit">
+                    <input id="submit" type="submit" value="Send">
                 </form>
             </div>
         </div>

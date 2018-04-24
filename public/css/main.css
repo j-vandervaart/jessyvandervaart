@@ -1,6 +1,4 @@
 * {
-	padding: 0;
-	margin: 0;
 	box-sizing: border-box;
 }
 
@@ -76,6 +74,7 @@ hr {
 	top: 0;
 	transition: width 1s ease;
 	overflow-x: hidden;
+	overflow-y: hidden;
 }
 
 .slide {
@@ -117,6 +116,7 @@ hr {
 	margin-top: 10%;
 	font-family: Open Sans;
 	font-size: 14px;
+	line-height: 25px;
 }
 
 #workPrompt {
@@ -128,7 +128,8 @@ hr {
 #headerCopy {
 	width: 80%;
 	margin: 0 auto;
-	padding-top: 30%;
+	align-self: center;
+	margin-bottom: 70px;
 }
 
 .mainSec {
@@ -137,11 +138,10 @@ hr {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-
+	height: 90vh;
 }
 
 #myWorkButton {
-	/*margin: 0 auto;*/
 	margin-top: 20%;
 	font-family: Open Sans;
 	font-size: 14px;
@@ -166,8 +166,8 @@ hr {
 
 #characterDiv {
 	display: none;
-	margin-top: 10%;
 	width: 35%;
+	margin-bottom: 70px;
 }
 
 @media screen and (min-width: 769px) {
@@ -243,15 +243,11 @@ hr {
 
 	#headerCopy {
 		width: 35.4166666667%;
-		padding-top: 10%;
-		/*margin-top: %;*/
-	    /*margin-left: 10%;*/
 	}
 
 	.mainSec {
 	    width: 90%;
 	    margin: 0 auto;
-	    margin-bottom: 200px;
 	}
 
 	#myWorkButton {
@@ -279,7 +275,7 @@ hr {
 
 	#characterDiv {
 		display: block;
-		margin-top: 10%;
+		align-self: center;
 		width: 35%;
 	}
 }
@@ -303,6 +299,7 @@ hr {
 	width: 80%;
 	margin: 0 auto;
 	margin-top: 20%;
+	align-self: center;
 }
 
 .mainHdgContact {
@@ -357,13 +354,15 @@ textarea {
 @media screen and (min-width: 769px) {
 	.header {
 		width: 30%;
-		margin-top: 8%;
+		margin-top: 0;
+		height: 450px;
 	}
 
 	#formDiv {
 		padding: 0;
-		margin-top: 8%;
 		width: 35%;
+		align-self: center;
+		height: 450px;
 	}
 
 	#contactQ {
@@ -376,7 +375,7 @@ textarea {
 
 .headerAbout {
 	width: 80%;
-	/*margin: 0 auto;*/
+	align-self: center;
 	margin-top: 20%;
 }
 
@@ -388,21 +387,21 @@ textarea {
 
 #skills {
 	width: 80%;
-	/*margin: 0 auto;*/
-	margin-top: 12%;
 	height: auto;
+	align-self: center;
 }
 
 .skillsHdg {
 	font-family: Century;
 	font-size: 18px;
-	margin-bottom: 5px;
+	margin-bottom: 12px;
+	margin-top: 12%;
 }
 
 .skillsLi {
 	font-family: Open Sans;
 	list-style: none;
-	margin-top: 10px;
+	margin-bottom: 12px;
 	font-size: 12px;
 }
 
@@ -418,14 +417,11 @@ textarea {
 
 #edu {
 	width: 80%;
-	/*margin: 0 auto;*/
-	margin-top: 4%;
 }
 
 .indEdu {
 	width: 100%;
 	margin-bottom: 8%;
-	/*margin-top: 20px;*/
 }
 
 .schoolName {
@@ -451,13 +447,14 @@ textarea {
 @media screen and (min-width: 769px) {
 	#skills {
 		padding: 0;
-		margin-top: 8%;
 		width: 20%;
+		margin-top: 80px;
 	}
 
 	.headerAbout {
+		margin-top: 0;
 		width: 40%;
-		margin-top: 8%;
+		margin-top: 80px;
 	}
 
 	#list1 {
@@ -480,6 +477,10 @@ textarea {
 	.indEdu {
 		width: 20%;
 	}
+
+	.skillsHdg {
+		margin-top: 0;
+	}
 }
 
 /* Work List */
@@ -499,7 +500,6 @@ textarea {
 
 .workListDivs {
 	width: 100%;
-	/*height: 450px;*/
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -645,7 +645,6 @@ footer p:last-child {
 }
 
 .workTitleDiv h2 {
-	/*text-align: center;*/
 	text-transform: uppercase;
 	font-family: Century;
 	font-weight: 100;
