@@ -2,10 +2,10 @@
     <main>
         <header>
           <div id="headerDiv">
-                <img id="logoImage" src="images/Logo.svg" alt="Logo">
+                <img id="logoImage" src="/images/Logo.svg" alt="Logo">
             <p id="logoText">Jessy Vander Vaart</p>
             <nav>
-              <img id="hamburger" src="images/hamburger.svg" alt="Hamburger Menu">
+              <img id="hamburger" src="/images/hamburger.svg" alt="Hamburger Menu">
               <ul class="mainNav">
                 <router-link class="mainLinks" id="workNav" :to="`/`">Work</router-link>
                 <router-link class="mainLinks" id="aboutNav" :to="`/about`">About</router-link>
