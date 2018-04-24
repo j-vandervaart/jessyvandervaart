@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 var mailer = require('nodemailer');
 var cors = require('cors');
 var config = require('./config/database');
+var history = require('connect-history-api-fallback');
 
 // var index = require('./routes/index');
 // var users = require('./routes/users');
@@ -61,6 +62,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+app.use(history());
 
 app.listen(port, () => {
   console.log('server started on port'+port);
