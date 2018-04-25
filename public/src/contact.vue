@@ -13,7 +13,7 @@
                     </transition>
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" v-model="Email.name">
-                    <label for="email">Email Adress:</label>
+                    <label for="email">Email Address:</label>
                     <input type="text" id="email" name="email" v-model="Email.email">
                     <transition name="fade">
                         <p v-if="error.message == 'Please provide a valid email address'">Please provide a valid email address</p>

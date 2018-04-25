@@ -20,8 +20,8 @@
           </div>
         </div>
         <div id="objectiveText">
-          <h5>Project Objective</h5>
-          <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia</p>
+          <h5>Project Examination</h5>
+          <p>{{ work.obj_desc }}</p>
         </div>
       </div>
       <div class="mockupDiv">
