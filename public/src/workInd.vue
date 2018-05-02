@@ -23,9 +23,9 @@
           <h5>Project Examination</h5>
           <p>{{ work.obj_desc }}</p>
         </div>
-      </div>
-      <div class="mockupDiv">
-        <img v-if="work.proj_id != 'undefined'" v-bind:src="`/images/${work.proj_id}-mockup.png`" alt="">
+        <div class="mockupDiv">
+          <img v-if="work.proj_id != 'undefined'" v-bind:src="`/images/${work.proj_id}-mockup.png`" alt="">
+        </div>
       </div>
       <div class="forwardDiv">
         <router-link v-on:click.native="goBack" v-bind:key="work._id" :to="`${work.proj_id}`"><div>Previous Project</div></router-link>
@@ -55,11 +55,7 @@
             var index = vm.next.findIndex(x => x == response.data.proj_id);
             vm.test = index;
           });
-          // window.addEventListener('scroll', this.handleScroll);
-          
-        },
-        destroyed () {
-          // window.removeEventListener('scroll', this.handleScroll);
+          window.addEventListener('scroll', this.workScroll);
         },
         methods: {
           goNext: function() {
@@ -79,9 +75,17 @@
             // console.log(this.next[this.test]);
             this.$router.push(''+this.next[this.test]);
           },
-          handleScroll: function(e) {
-            console.log(e);
-            console.log(this.$el.querySelector(".workHeaderImg"));
+          workScroll: function() {
+            if(window.innerWidth > 1024) {
+              console.log(window.innerHeight);
+              console.log(this.$el.querySelector(".mockupDiv").getBoundingClientRect().top);
+              if((window.innerHeight - this.$el.querySelector(".mockupDiv").getBoundingClientRect().top) > 100) {
+                this.$el.querySelector(".mockupDiv").style.left = "0px";
+                this.$el.querySelector(".mockupDiv").style.opacity = "1";
+                this.$el.querySelector("#objectiveText").style.right = "0px";
+                this.$el.querySelector("#objectiveText").style.opacity = "1";
+              }
+            }
           }
         },
         watch: {
@@ -89,7 +93,13 @@
                 var vm = this;
                 axios.get(`/api/work/${params.proj_id}`).then(function(response) {
                   vm.work = response.data;
-                })
+                });
+                if(window.innerWidth > 1024) {
+                  this.$el.querySelector(".mockupDiv").style.left = "-1000px";
+                  this.$el.querySelector(".mockupDiv").style.opacity = "0";
+                  this.$el.querySelector("#objectiveText").style.right = "-1000px";
+                  this.$el.querySelector("#objectiveText").style.opacity = "0";
+                }
             }
         }
     }

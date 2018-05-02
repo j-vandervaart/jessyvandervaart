@@ -6,6 +6,20 @@ header{
 	height: 10vh;
 }
 
+@font-face {
+  font-family: 'Century';
+  src: url('./fonts/Century.eot') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Segoe UI';
+  src: url('./fonts/SegoeUISymbol.eot') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .fade-enter-active, .fade-leave-active {
   transition-property: opacity;
   transition-duration: .4s;
@@ -47,7 +61,7 @@ header{
 }
 
 #logoText {
-	font-family: "Open Sans";
+	font-family: 'Open Sans', sans-serif;
 	margin-top: 25px;
 	margin: 0 auto;
 	text-align: center;
@@ -75,6 +89,7 @@ hr {
 	transition: width 1s ease;
 	overflow-x: hidden;
 	overflow-y: hidden;
+	padding-top: 25px;
 }
 
 .slide {
@@ -94,11 +109,12 @@ hr {
 .mainLinks {
 	display: block;
 	margin-left: 20px;
-	font-family: 'PT Sans';
+	font-family: 'PT Sans', sans-serif;
+	font-size: 20px;
 	text-decoration: none;
 	color: #1f1f1f;
 	opacity: .9;
-	padding-top: 15px;
+	padding-top: 25px;
 	position: relative;
 }
 
@@ -107,22 +123,31 @@ hr {
 }
 
 .mainHdg {
-	font-family: Century;
+	font-family: 'Century', serif;
 	font-size: 2.5em;
 	letter-spacing: 3px;
 }
 
 #mainDesc {
 	margin-top: 10%;
-	font-family: Open Sans;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
 	line-height: 25px;
 }
 
 #workPrompt {
 	margin-top: 10%;
-	font-family: Open Sans;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
+	width: 230px;
+	padding-bottom: 10px;
+	transition: all .3s ease;
+	border-bottom: 2px solid transparent;
+	cursor: pointer;
+}
+
+#workPrompt:hover {
+	border-bottom: 2px solid #91CCC8;
 }
 
 #headerCopy {
@@ -144,7 +169,7 @@ hr {
 
 #myWorkButton {
 	margin-top: 20%;
-	font-family: Open Sans;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
 	border: solid 2px #91CCC8;
 	width: 120px;
@@ -168,7 +193,25 @@ hr {
 #characterDiv {
 	display: none;
 	width: 35%;
-	margin-bottom: 70px;
+	margin-bottom: 100px;
+}
+
+#pionear-promotional-site {
+		/*position: relative;*/
+	left: -1000px;
+}
+
+#scifi-tv {
+		/*position: relative;*/
+	right: -1000px;
+}
+
+#campers-guide {
+	left: -1000px;
+}
+
+#pionear {
+	right: -1000px;
 }
 
 @media screen and (min-width: 769px) {
@@ -186,7 +229,7 @@ hr {
 	}
 
 	#logoText {
-		font-family: "Open Sans";
+		font-family: 'Open Sans', sans-serif;
 		flex-grow: 1;
 		margin-top: 25px;
 		margin-left: 15px;
@@ -221,9 +264,16 @@ hr {
 	.mainLinks {
 		display: inline-block;
 		margin-left: 55px;
-		font-family: 'PT Sans';
+		font-family: 'PT Sans', sans-serif;
 		text-decoration: none;
 		color: #1f1f1f;
+		font-size: 16px;
+		padding-top: 15px;
+		transition: all .2s ease;
+	}
+
+	.mainLinks:hover {
+		color: #91CCC8;
 	}
 
 	.menuChange {
@@ -231,14 +281,14 @@ hr {
 	}
 
 	.mainHdg {
-		font-family: Century;
+		font-family: 'Century', serif;
 		font-size: 3.5em;
 		letter-spacing: 3px;
 	}
 
 	#mainDesc {
 		margin-top: 8%;
-		font-family: Open Sans;
+		font-family: 'Open Sans', sans-serif;
 		font-size: 20px;
 	}
 
@@ -249,7 +299,7 @@ hr {
 
 	#myWorkButton {
 		margin-top: 8%;
-		font-family: Open Sans;
+		font-family: 'Open Sans', sans-serif;
 		font-size: 16px;
 		border: solid 2px #91CCC8;
 		width: 150px;
@@ -281,20 +331,38 @@ hr {
 	#headerCopy {
 		width: 35.4166666667%;
 	}
+
+	#pionear-promotional-site {
+		/*position: relative;*/
+		left: -1000px;
+	}
+
+	#scifi-tv {
+		/*position: relative;*/
+		right: -1000px;
+	}
+
+	#campers-guide {
+		left: -1000px;
+	}
+
+	#pionear {
+		right: -1000px;
+	}
 }
 
 /*ABOUT*/
 
 #contactQ {
 	margin-top: 10%;
-	font-family: Open Sans;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
 	line-height: 25px;
 }
 
 #messageHail {
 	margin-top: 13%;
-	font-family: Open Sans;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
 }
 
@@ -306,14 +374,14 @@ hr {
 }
 
 .mainHdgContact {
-	font-family: Century;
+	font-family: 'Century', serif;
 	font-size: 2em;
 	letter-spacing: 3px;
 }
 
 label {
 	display: block;
-	font-family: Open Sans;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 12px;
 	text-transform: uppercase;
 	letter-spacing: 2px;
@@ -328,7 +396,7 @@ label {
 }
 
 #formDiv p {
-	font-family: Open Sans;
+	font-family: 'Open Sans', sans-serif;
 	color: #69bcb7;
 	padding-top: 10px;
 }
@@ -339,7 +407,7 @@ label {
 	border: solid 1px #4D4B4B;
 	width: 70px;
 	height: 30px;
-	font-family: Open Sans;
+	font-family: 'Open Sans', sans-serif;
 	margin-top: 10px;
 }
 
@@ -390,7 +458,7 @@ textarea {
 }
 
 .aboutBlurb {
-	font-family: Open Sans;
+	font-family: 'Open Sans', sans-serif;
 	margin-top: 20px;
 	line-height: 25px;
 }
@@ -402,14 +470,14 @@ textarea {
 }
 
 .skillsHdg {
-	font-family: Century;
+	font-family: 'Century', serif;
 	font-size: 18px;
 	margin-bottom: 12px;
 	margin-top: 12%;
 }
 
 .skillsLi {
-	font-family: Open Sans;
+	font-family: 'Open Sans', sans-serif;
 	list-style: none;
 	margin-bottom: 12px;
 	font-size: 12px;
@@ -441,7 +509,7 @@ textarea {
 
 .schoolName {
 	margin-top: 10px;
-	font-family: PT Sans;
+	font-family: 'PT Sans', sans-serif;
 	font-size: 16px;
 	font-weight: 600;
 	color: #6f9693;
@@ -449,13 +517,13 @@ textarea {
 
 .progName {
 	margin-top: 10px;
-	font-family: Open Sans;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
 }
 
 .degreeName {
 	margin-top: 10px;
-	font-family: Open Sans;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
 }
 
@@ -524,6 +592,8 @@ textarea {
 /* Work List */
 
 #workListCont {
+	max-width: 100vw;
+	overflow-x: hidden;
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -533,13 +603,23 @@ textarea {
 	width: 100%;
 	text-decoration: none;
 	color: black;
-	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.03);
+	box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
+	position: relative;
+	transition: right 1.2s ease, left 1.2s ease;
 }
 
 .workListDivs {
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
+}
+
+.workListFix {
+	position: absolute;
+	display: flex;
+	z-index: 1;
+	height: 100%;
+	width: 100%;
 }
 
 .workListImgs {
@@ -552,12 +632,15 @@ textarea {
 .workListContent {
 	width: 100%;
 	height: 200px;
+	transition: background-color .5s ease;
 }
 
 .workListContent h2 {
 	text-align: center;
 	padding-top: 30px;
-	font-family: 'Century';
+	padding-right: 20px;
+	padding-left: 20px;
+	font-family: 'Century', serif;
 	font-weight: 100;
 	text-transform: uppercase;
 }
@@ -567,9 +650,10 @@ textarea {
 	margin: 0 auto;
 	text-align: center;
 	padding-top: 30px;
-	font-family: 'Open Sans';
+	font-family: 'Open Sans', sans-serif;
 	font-weight: 200;
 	font-size: 15px;
+	line-height: 30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -655,7 +739,7 @@ footer img {
 }
 
 footer p {
-	font-family: Segoe UI;
+	font-family: 'Segoe UI';
 	text-align: center;
 	padding-top: 15px;
 	font-size: 13px;
@@ -684,7 +768,7 @@ footer p:last-child {
 
 .workTitleDiv h2 {
 	text-transform: uppercase;
-	font-family: Century;
+	font-family: 'Century', serif;
 	font-weight: 100;
 	padding-top: 20px;
 }
@@ -696,14 +780,14 @@ footer p:last-child {
 }
 
 .workContDiv h3 {
-	font-family: Open Sans;
+	font-family: 'Open Sans', sans-serif;
 	font-weight: 500;
 	font-size: 18px;
 	color: #69bcb7;
 }
 
 .workContDiv p {
-	font-family: Open Sans;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 15px;
 	padding-top: 8px;
 	font-weight: 350;
@@ -711,7 +795,7 @@ footer p:last-child {
 }
 
 .workContDiv h5 {
-	font-family: Open Sans;
+	font-family: 'Open Sans', sans-serif;
 	font-weight: 500;
 	font-size: 16px;
 	color: #69bcb7;
@@ -726,6 +810,11 @@ footer p:last-child {
 	width: 100%;
 	margin: 0 auto;
 	margin-top: 30px;
+	transition: left 1.1s ease, opacity 1.3s ease .6s;
+}
+
+#objectiveText {
+	transition: right 1.1s ease, opacity 1.3s ease .6s;
 }
 
 .mockupDiv img {
@@ -744,7 +833,15 @@ footer p:last-child {
 .forwardDiv a {
 	text-decoration: none;
 	color: #69bcb7;
-	font-family: Open Sans;
+	font-family: 'Open Sans', sans-serif;
+	border-bottom: 2px solid transparent;
+	padding-bottom: 10px;
+	transition: all .4s ease;
+}
+
+.forwardDiv a:hover {
+	color: black;
+	border-bottom: 2px solid black;
 }
 
 .indWorkCont {
@@ -768,6 +865,8 @@ footer p:last-child {
 
 	.indWorkCont {
 		width: 70%;
+		max-width: 70vw;
+		overflow-x: hidden;
 	}
 
 	#broadText {
@@ -777,9 +876,12 @@ footer p:last-child {
 
 	#objectiveText {
 		width: 30%;
-		margin-right: 15%;
+		margin-right: 10%;
 		float: right;
 		margin-top: 150px;
+		position: relative;
+		right: -1000px;
+		opacity: 0;
 	}
 
 	#techText {
@@ -804,6 +906,9 @@ footer p:last-child {
 		float: left;
 		margin-top: 60px;
 		margin-bottom: 50px;
+		position: relative;
+		left: -1000px;
+		opacity: 0;
 	}
 
 	.mockupDiv img {
