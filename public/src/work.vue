@@ -66,17 +66,31 @@
                         this.$el.querySelector("#pionear").style.right = "0px";
                     }
                 }
-                if(window.innerWidth < 1024) {
+                if(window.innerWidth <= 1024 && window.innerWidth > 768) {
                     if((window.innerHeight - this.$el.querySelector("#workListCont").getBoundingClientRect().top) > 0) {
                         this.$el.querySelector("#pionear-promotional-site").style.left = "0px";
                     }
-                    if((window.innerHeight - this.$el.querySelector("#workListCont").getBoundingClientRect().top) > 400) {
+                    if((window.innerHeight - this.$el.querySelector("#workListCont").getBoundingClientRect().top) > 500) {
                         this.$el.querySelector("#scifi-tv").style.right = "0px";
                     }
-                    if((window.innerHeight - this.$el.querySelector("#workListCont").getBoundingClientRect().top) > 750) {
+                    if((window.innerHeight - this.$el.querySelector("#workListCont").getBoundingClientRect().top) > 825) {
                         this.$el.querySelector("#campers-guide").style.left = "0px";
                     }
                     if((window.innerHeight - this.$el.querySelector("#workListCont").getBoundingClientRect().top) > 1100) {
+                        this.$el.querySelector("#pionear").style.right = "0px";
+                    }
+                }
+                if(window.innerWidth <= 768) {
+                    if((window.innerHeight - this.$el.querySelector("#workListCont").getBoundingClientRect().top) > 0) {
+                        this.$el.querySelector("#pionear-promotional-site").style.left = "0px";
+                    }
+                    if((window.innerHeight - this.$el.querySelector("#workListCont").getBoundingClientRect().top) > 500) {
+                        this.$el.querySelector("#scifi-tv").style.right = "0px";
+                    }
+                    if((window.innerHeight - this.$el.querySelector("#workListCont").getBoundingClientRect().top) > 900) {
+                        this.$el.querySelector("#campers-guide").style.left = "0px";
+                    }
+                    if((window.innerHeight - this.$el.querySelector("#workListCont").getBoundingClientRect().top) > 1325) {
                         this.$el.querySelector("#pionear").style.right = "0px";
                     }
                 }
