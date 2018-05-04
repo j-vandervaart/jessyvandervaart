@@ -3,7 +3,7 @@
 <section>
     <div class="splash">
         <div id="headerCopy">
-            <h1 class="mainHdg">Full-stack Web Developer</h1>
+            <h1 class="mainHdg">Full-Stack Web Developer</h1>
             <p id="mainDesc">My work includes branding, designing, and developing websites and web-based apps.</p>
             <!-- <p id="myWorkButton">See my work</p> -->
             <p v-on:click="scrollTo" id="workPrompt">Check out some of my work below.</p>
@@ -28,7 +28,7 @@
             <div>
                 <img src="images/Logo.svg" alt="Logo">
                 <p>Website made by Jessy Vander Vaart</p>
-                <p>© 2017 All Rights Reserved</p>
+                <p>© 2018 All Rights Reserved</p>
             </div>
     </footer>
 </section>

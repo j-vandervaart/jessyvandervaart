@@ -3,7 +3,7 @@
         <div class="mainSec">
             <div class="headerAbout">
                 <h1 class="mainHdgContact">About Me</h1>
-                <p class="aboutBlurb">I am a 23 year old web desinger and developer from London, ON. I enjoy working in all areas of web development and design, but have a keen interest in back-end web development.</p>
+                <p class="aboutBlurb">I am a 23 year old web designer and developer from London, ON. I enjoy working in all areas of web development and design, but have a keen interest in back-end web development.</p>
                 <p class="aboutBlurb">When I step away from developing I love to make things. Not sworn to any one hobby, I've tried welding, carpentry, gardening, and a handful of other things. My passion for being a maker is what lead me to web development.</p>
             </div>
             <div id="skills">
@@ -14,14 +14,16 @@
             			<p class="skillsLi">CSS3</p>
             			<p class="skillsLi">JAVASCRIPT</p>
             			<p class="skillsLi">PHP</p>
-                        <p class="skillsLi">LARAVEL</p>
+                        <p class="skillsLi">Bootstrap</p>
+                        <p class="skillsLi">Sass</p>
             		</div>
             		<div id="list2">
 	            		<p class="skillsLi">MongoDB</p>
-	            		<p class="skillsLi">VUE JS</p>
-	            		<p class="skillsLi">NODE JS</p>
-                        <p class="skillsLi">Flexbox</p>
-	            		<p class="skillsLi">BOOTSTRAP</p>
+	            		<p class="skillsLi">Vue JS</p>
+	            		<p class="skillsLi">Node JS</p>
+                        <p class="skillsLi">Laravel</p>
+                        <p class="skillsLi">webpack</p>
+	            		<p class="skillsLi">GitHub</p>
 	            	</div>
             	</div>
             </div>
