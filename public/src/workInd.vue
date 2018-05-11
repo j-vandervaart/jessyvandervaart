@@ -77,8 +77,8 @@
           },
           workScroll: function() {
             if(window.innerWidth > 1024) {
-              console.log(window.innerHeight);
-              console.log(this.$el.querySelector(".mockupDiv").getBoundingClientRect().top);
+              // console.log(window.innerHeight);
+              // console.log(this.$el.querySelector(".mockupDiv").getBoundingClientRect().top);
               if((window.innerHeight - this.$el.querySelector(".mockupDiv").getBoundingClientRect().top) > 100) {
                 this.$el.querySelector(".mockupDiv").style.left = "0px";
                 this.$el.querySelector(".mockupDiv").style.opacity = "1";

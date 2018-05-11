@@ -44,11 +44,11 @@
                     email: this.Email.email,
                     message: this.Email.message
                 }
-                console.log(newEmail);
+                // console.log(newEmail);
 
                 var vm = this;
                 axios.post('/contact', newEmail).then(function(response){
-                    console.log(response.data.response);
+                    // console.log(response.data.response);
                     vm.error.message = response.data.response;
                 });
                 // this.$router.push('/work');

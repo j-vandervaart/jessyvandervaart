@@ -98,7 +98,7 @@
                 // console.log(this.$el.querySelector("#workListCont").getBoundingClientRect().top);
             },
             scrollTo: function() {
-                console.log('234234');
+                // console.log('234234');
                 this.scrollClick = this.$el.querySelector("#workListCont");
                 TweenLite.to(window, 1, {scrollTo:400, ease:Power2.easeOut});
             }
