@@ -12,15 +12,15 @@
             		<div id="list1">
             			<p class="skillsLi">HTML5</p>
             			<p class="skillsLi">CSS3</p>
-            			<p class="skillsLi">JAVASCRIPT</p>
-            			<p class="skillsLi">PHP</p>
-                        <p class="skillsLi">Bootstrap</p>
                         <p class="skillsLi">Sass</p>
+            			<p class="skillsLi">JavaScript</p>
+            			<p class="skillsLi">Vue JS</p>
+                        <p class="skillsLi">Node JS</p>
             		</div>
             		<div id="list2">
 	            		<p class="skillsLi">MongoDB</p>
-	            		<p class="skillsLi">Vue JS</p>
-	            		<p class="skillsLi">Node JS</p>
+	            		<p class="skillsLi">PHP</p>
+	            		<p class="skillsLi">MySQL</p>
                         <p class="skillsLi">Laravel</p>
                         <p class="skillsLi">webpack</p>
 	            		<p class="skillsLi">GitHub</p>
