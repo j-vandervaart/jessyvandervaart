@@ -41,7 +41,7 @@
         data() {
           return {
             work: {},
-            next: ["campers-guide", "pionear-promotional-site", "pionear", "scifi-tv"],
+            next: ["campers-guide", "pionear", "pionear-promotional-site", "scifi-tv"],
             test: ''
           }
         },
