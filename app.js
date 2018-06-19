@@ -44,7 +44,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 // app.use('/', index);
 // app.use('/users', users);
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 // app.use(cors());
 // catch 404 and forward to error handler
 // app.use(function(req, res, next) {
