@@ -46,7 +46,7 @@ router.post('/contact', function(req, res){
 
 			var transporter = nodemailer.createTransport({
 				host: 'smtp.gmail.com',
-				port: 465,
+				port: 8080,
 				secure: true,
 				auth: {
 					user: 'jessyvander1@gmail.com',
