@@ -56,7 +56,7 @@ router.post('/contact', function(req, res){
 
 			var mailOptions = {
 				from: req.body.email,
-				to: 'jessyvander1@gmail.com',
+				to: 'jvand223@gmail.com',
 				subject: 'Portfolio Contact Message',
 				text: req.body.message,
 				html: htmloutput
