@@ -68,7 +68,7 @@ router.post('/contact', function(req, res){
 
 			transporter.sendMail(mailOptions, function(error, res) {
 				if(error) {
-					res.sendStatus(555);
+					return console.log(error);
 				}else {
 					res.sendStatus(200);
 				}
