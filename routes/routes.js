@@ -45,12 +45,13 @@ router.post('/contact', function(req, res){
 			`;
 
 			var transporter = nodemailer.createTransport({
+				service: 'gmail'
 				host: 'smtp.gmail.com',
 				port: 465,
 				secure: true,
 				auth: {
 					user: 'jessyvander1@gmail.com',
-					pass: 'ACSvolume10!'
+					pass: 'ACSvolume500!'
 				},
 				tls: {
         			// do not fail on invalid certs
