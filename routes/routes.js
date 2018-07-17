@@ -37,10 +37,10 @@ router.post('/contact', function(req, res){
 		}else {
 			var htmloutput = `
 			<h1>Portfolio Message</h1>
-			<ul>
-				<li>${req.body.name}</li>
-				<li>${req.body.email}</li>
-				<li>${req.body.message}</li>
+			<ul style:"list-style-type: none;">
+				<li>Sender Name: ${req.body.name}</li>
+				<li>Sender Email Address: ${req.body.email}</li>
+				<li>Message Contents: ${req.body.message}</li>
 			</ul>
 			`;
 
