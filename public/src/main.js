@@ -12,10 +12,6 @@ Vue.use(VueRouter);
 const routes = [
 	{
 		path: '/',
-		redirect: '/work'
-	},
-	{
-		path: '/work',
 		component: Works
 	},
 	{
