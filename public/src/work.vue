@@ -1,17 +1,6 @@
 <template>
 
 <section>
-    <div class="splash">
-        <div id="headerCopy">
-            <h1 class="mainHdg">Full-Stack Web Developer</h1>
-            <p id="mainDesc">My work includes branding, designing, and developing websites and web-based apps.</p>
-            <!-- <p id="myWorkButton">See my work</p> -->
-            <p v-on:click="scrollTo" id="workPrompt">Check out some of my work below.</p>
-        </div>
-        <div id="characterDiv">
-            <img id="character" src="images/character.png" alt="caricature">
-        </div>
-    </div>
     <div id="workListCont">
         <router-link v-bind:id="work.proj_id" v-for="work in works" v-bind:key="work.id" :to="`/work/${work.proj_id}`">
             <div @mouseenter="hoverOver" @mouseleave="hoverOut" class="workListFix"></div>
@@ -24,13 +13,6 @@
                 </div>
         </router-link>
     </div>
-    <footer>
-            <div>
-                <img src="images/Logo.svg" alt="Logo">
-                <p>Website made by Jessy Vander Vaart</p>
-                <p>© 2018 All Rights Reserved</p>
-            </div>
-    </footer>
 </section>
 
 </template>

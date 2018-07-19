@@ -1,24 +1,9 @@
 <template>
     <main>
-        <header>
-          <div id="headerDiv">
-                <img id="logoImage" src="/images/Logo.svg" alt="Logo">
-            <p id="logoText">Jessy Vander Vaart</p>
-            <nav>
-              <img id="hamburger" src="/images/hamburger.svg" alt="Hamburger Menu">
-              <ul class="mainNav">
-                <router-link class="mainLinks" id="workNav" :to="`/`">Work</router-link>
-                <router-link class="mainLinks" id="aboutNav" :to="`/about`">About</router-link>
-                <router-link class="mainLinks" id="contactNav" :to="`/contact`">Contact</router-link>
-              </ul>
-            </nav>
-          </div>
-          <hr>
-        </header>
-            <transition name="fade">
-                <router-view v-bind:works="works">
-                </router-view>
-            </transition>
+        <transition name="fade">
+            <router-view v-bind:works="works">
+            </router-view>
+        </transition>
     </main>
 </template>
 
@@ -30,7 +15,7 @@
         },
         created: function() {
             var vm = this;
-            axios.get('/api/work').then(function(response) {
+            axios.get('http://localhost:3000/api/work').then(function(response) {
                 // console.log(response);
                 vm.works = response.data;
             });
