@@ -1,24 +1,617 @@
-* {
-	box-sizing: border-box;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-header{
+@font-face {
+    font-family: 'Wagner Condensed';
+    src: url('/fonts/wagner_zip-change_condensed-webfont.woff2') format('woff2'),
+         url('/fonts/wagner_zip-change_condensed-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Header */
+
+header {
 	height: 10vh;
+	min-height: 72px;
 }
 
-@font-face {
-  font-family: 'Century';
-  src: url('./fonts/Century.eot') format('embedded-opentype');
-  font-weight: normal;
-  font-style: normal;
+#blackBar {
+	background-color: #1c1c1c;
+	height: 25px;
+	/*position: relative;*/
+	/*z-index: 2;*/
 }
 
-@font-face {
-  font-family: 'Segoe UI';
-  src: url('./fonts/SegoeUISymbol.eot') format('embedded-opentype');
-  font-weight: normal;
-  font-style: normal;
+#headerImgDiv {
+	display: flex;
+	justify-content: space-between;
 }
+
+#bwLogo {
+	height: 55px;
+	
+}
+
+#homeRouter {
+	display: block;
+	position: relative;
+	top: -8px;
+	margin-left: 5%;
+}
+
+#hamburger {
+	width: 35px;
+	/*margin-right: 5%;*/
+	margin-top: 15px;
+	position: fixed;
+	right: 5%;
+	z-index: 2;
+}
+
+.hamClass {
+	background-color: #1c1c1c;
+	height: 4px;
+	margin-bottom: 5px;
+	border-radius: 10px;
+	transition: all .4s ease;
+}
+
+.hamColor {
+	background-color: white;
+}
+
+.hamOne {
+	width: 35px;
+}
+
+.hamTwo {
+	width: 18px;
+	float: right;
+}
+
+.hamOneChange {
+	transform: rotate(45deg);
+	transition: all .5s ease;
+}
+
+.hamTwoChange {
+	transform: rotate(-45deg);
+	width: 35px;
+	position: relative;
+	top: -8px;
+	transition: all .5s ease;
+}
+
+@media screen and (min-width: 1025px) {
+
+	#homeRouter {
+		margin-left: 15%;
+	}
+
+	#hamburger {
+		right: 15%;
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	#bwLogo {
+		height: 75px;
+	}
+}
+
+@media screen and (min-width: 2200px) {
+	#bwLogo {
+		height: 90px;
+	}
+}
+
+/* Nav Bar */
+
+nav {
+	height: 100vh;
+	width: 0;
+	position: fixed;
+	top: 0;
+	right:0;
+	background-color: #1c1c1c;
+	z-index: 1;
+	transition: width 1s ease;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.navDiv {
+	width: 70%;
+	align-self: center;
+	opacity: 0;
+	transition: all .4s ease;
+}
+
+.navDivChange {
+	opacity: 1;
+}
+
+.navDiv li {
+	font-family: 'Raleway';
+	text-transform: uppercase;
+	font-size: 25px;
+	color: white;
+	margin-bottom: 6vh;
+	padding-bottom: 20px;
+	text-align: right;
+	border-bottom: 1px rgba(255,255,255, .2) solid;
+	transition: all .4s ease;
+	cursor: pointer;
+}
+
+.navDiv ul li:hover {
+	font-size: 27px;
+	color: #707070;
+}
+
+#homeNavButton {
+	text-decoration: none;
+}
+
+.growMenu {
+	width: 100%;
+}
+
+/* Splash Section */
+
+#splashSection {
+	height: 90vh;
+	min-height: 350px;
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+#nameDesc {
+	width: 100%;
+	opacity: 0;
+	transition: opacity 1s ease;
+}
+
+#nameDesc h1 {
+	font-family: 'Raleway';
+	text-transform: uppercase;
+	padding-top: 10vh;
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+
+#nameDesc h2 {
+	font-family: 'Raleway';
+	margin-top: 4vh;
+	margin-bottom: 10px;
+}
+
+#grayDivide {
+	width: 0;
+	height: 1px;
+	background-color: #707070;
+	opacity: .5;
+	margin-top: 4vh;
+	margin-bottom: 10px;
+	z-index: 0;
+	transition: width 2s ease;
+}
+
+#bottomDivide {
+	display: none;
+	width: 0;
+	height: 1px;
+	background-color: #707070;
+	opacity: .5;
+	margin-bottom: 8vh;
+	z-index: 0;
+	transition: width 1.5s ease;
+}
+
+#missionState {
+	width: 70%;
+	position: relative;
+	right: -50px;
+	opacity: 0;
+	transition: right 1.5s ease, opacity 1s ease;
+}
+
+#missionState p {
+	font-family: 'Wagner Condensed';
+	font-size: 34px;
+	/*width: 70%;*/
+	line-height: 45px;
+	margin-top: 4vh;
+}
+
+#seeMore {
+	padding-bottom: 25px;
+	margin: 0 auto;
+	cursor: pointer;
+	position: relative;
+	bottom: 0;
+	transition: bottom .3s ease;
+}
+
+#seeMore:hover {
+	bottom: 10px;
+	transition: bottom .3s ease;
+}
+
+#seeMore p {
+	font-family: 'Raleway';
+	font-size: 13px;
+	text-transform: uppercase;
+	color: #1c1c1c;
+	opacity: .5;
+	padding-bottom: 5px;
+}
+
+#seeMore img {
+	width: 13px;
+	display: block;
+	margin: 0 auto;
+
+}
+
+@media screen and (max-width: 320px) {
+	#missionState p {
+		font-size: 26px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	
+	#splashSection {
+		min-height: 650px;
+	}
+
+	#splashWords {
+		margin-top: 5vh;
+	}
+
+	#missionState {
+		width: 400px;
+	}
+
+	#nameDesc h1, h2 {
+		font-size: 24px;
+	}
+
+	#missionState p {
+		font-size: 50px;
+		line-height: 60px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+
+	#missionState {
+		width: 50vh;
+	}
+
+	#nameDesc h1, h2 {
+		font-size: 30px;
+	}
+
+	#missionState p {
+		font-size: 70px;
+		line-height: 80px;
+	}
+
+	#seeMore p {
+		font-size: 25px;
+	}
+}
+
+@media screen and (min-width: 1025px) {
+
+	#splashSection {
+		width: 70%;
+		min-height: 600px;
+	}
+	
+	#splashWords {
+		display: flex;
+		margin-top: 18vh;
+	}
+
+	#nameDesc {
+		width: auto;
+		margin-right: 70px;
+	}
+
+	#nameDesc h1 {
+		padding-top: 16px;
+		font-size: 20px;
+	}
+
+	#nameDesc h2 {
+		font-size: 16px;
+		line-height: 30px;
+	}
+
+	#grayDivide {
+		width: 1px;
+		height: 45vh;
+		max-height: 0;
+		margin: 0;
+		transition: max-height 2s ease;
+	}
+
+	#bottomDivide {
+		display: block;
+	}
+
+	#missionState {
+		margin-left: 70px;
+		width: 400px;
+	}
+
+	#missionState p {
+		font-size: 50px;
+		width: 100%;
+		line-height: 60px;
+		margin-top: 2px;
+	}
+
+	#seeMore p {
+		font-size: 13px;
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	#nameDesc {
+		margin-right: 120px;
+	}
+
+	#nameDesc h1{
+		font-size: 35px;
+	}
+
+	#nameDesc h2 {
+		font-size: 25px;
+	}
+
+	#missionState {
+		margin-left: 120px;
+	}
+
+	#missionState p {
+		font-size: 60px;
+		line-height: 75px;
+	}
+
+	#seeMore p {
+		font-size: 20px;
+	}
+}
+
+@media screen and (min-width: 2200px) {
+	#nameDesc {
+		margin-right: 160px;
+	}
+
+	#nameDesc h1{
+		font-size: 45px;
+	}
+
+	#nameDesc h2 {
+		font-size: 35px;
+	}
+
+	#missionState {
+		margin-left: 160px;
+		width: 500px;
+	}
+
+	#missionState p {
+		font-size: 75px;
+		line-height: 85px;
+	}
+
+	#seeMore p {
+		font-size: 30px;
+	}
+}
+
+/* Work Section */
+
+#Work {
+	background-color: #1c1c1c; 
+}
+
+#workContainer {
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+#workContainer h1 {
+	font-size: 21px;
+	text-transform: uppercase;
+	color: white;
+	font-family: 'Raleway Light';
+	padding-top: 10vh;
+	letter-spacing: 3px;
+	width: 100%;
+	line-height: 20px;
+}
+
+#workContainer p {
+	color: white;
+	font-family: Open Sans Light;
+	margin-top: 4vh;
+	line-height: 22px;
+	font-size: 14px;
+	/*word-spacing: 2px;*/
+	width: 100%;
+}
+
+#workContainer div {
+	display: none;
+	height: 1px;
+	background-color: #707070;
+	width: 68%;
+}
+
+#workListContainer {
+	width: 90%;
+	padding-top: 70px;
+	margin: 0 auto;
+	position: relative;
+	padding-bottom: 100px;
+}
+
+.workAnchors {
+	display: block;
+	width: 90vw;
+	/*height: 100vw;*/
+}
+
+.workSquares {
+	height: 90vw;
+	background-size: cover;
+	background-position: center;
+}
+
+@media screen and (min-width: 768px) {
+	#workListContainer {
+		width: 90%;
+		margin-top: 70px;
+		padding-top: 0;
+	}
+
+	.workAnchors {
+		width: 31%;
+	}
+
+	.workSquares {
+	}
+
+	#pionear-promotional-site {
+		height: 40vw;
+	}
+
+	#scifi-tv {
+		height: 19vw;
+		position: absolute;
+		right: 0;
+		left: 0;
+		margin-left: auto;
+		margin-right: auto;
+		top: 0;
+		width: 31%;
+	}
+
+	#campers-guide {
+		height: 19vw;
+		position: absolute;
+		right: 0;
+		left: 0;
+		margin-left: auto;
+		margin-right: auto;
+		top: 21vw;
+		width: 31%;
+	}
+
+	#pionear {
+		height: 40vw;
+		position: absolute;
+		right: 0;
+		width: 31%;
+		top: 0;
+	}
+}
+
+@media screen and (min-width: 1025px) {
+	#workContainer {
+		width: 70%;
+	}
+
+	#workContainer h1 {
+		padding-top: 8vh;
+		width: 30%;
+	} 
+
+	#workContainer div {
+		display: block;
+		margin-top: 10.5vh;
+	}
+
+	#workListContainer {
+		padding-bottom: 50px;
+		margin-top: 40px;
+		width: 70%;
+	}
+
+	#pionear-promotional-site {
+		height: 30vw;
+	}
+
+	#scifi-tv {
+	    height: 14vw;
+	}
+
+	#campers-guide {
+		height: 14vw;
+		top: 16vw;
+	}
+
+	#pionear {
+		height: 30vw;
+	}
+}
+
+
 
 .fade-enter-active, .fade-leave-active {
   transition-property: opacity;
@@ -46,708 +639,6 @@ header{
   opacity: 0;
 }
 
-/*WORK*/
-
-#headerDiv {
-	display: block;
-}
-
-#logoImage {
-	width: 50px;
-	height: 50px;
-	margin: 0 auto;
-	padding-top: 20px;
-	display: block;
-}
-
-#logoText {
-	font-family: 'Open Sans', sans-serif;
-	margin-top: 25px;
-	margin: 0 auto;
-	text-align: center;
-}
-
-.splash {
-	display: flex;
-	justify-content: space-around;
-	height: 90vh;
-	min-height: 558.6px;
-}
-
-hr {
-	display: none;
-}
-
-.mainNav {
-	width: 0;
-	height: 100vh;
-	background-color: white;
-	box-shadow: 0px -5px 10px #cecece;
-	position: absolute;
-	right: 0;
-	top: 0;
-	transition: width 1s ease;
-	overflow-x: hidden;
-	overflow-y: hidden;
-	padding-top: 25px;
-}
-
-.slide {
-	width: 200px;
-	transition: width 1s ease;
-}
-
-#hamburger {
-	width: 30px;
-	height: auto;
-	position: absolute;
-	top: 15px;
-	right: 10px;
-	z-index: 1;
-}
-
-.mainLinks {
-	display: block;
-	margin-left: 20px;
-	font-family: 'PT Sans', sans-serif;
-	font-size: 20px;
-	text-decoration: none;
-	color: #1f1f1f;
-	opacity: .9;
-	padding-top: 25px;
-	position: relative;
-}
-
-.menuChange {
-	opacity: 1;
-}
-
-.mainHdg {
-	font-family: 'Century', serif;
-	font-size: 2.5em;
-	letter-spacing: 3px;
-}
-
-#mainDesc {
-	margin-top: 10%;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 14px;
-	line-height: 25px;
-}
-
-#workPrompt {
-	margin-top: 10%;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 14px;
-	width: 230px;
-	padding-bottom: 10px;
-	transition: all .3s ease;
-	border-bottom: 2px solid transparent;
-	cursor: pointer;
-}
-
-#workPrompt:hover {
-	border-bottom: 2px solid #91CCC8;
-}
-
-#headerCopy {
-	width: 80%;
-	margin: 0 auto;
-	align-self: center;
-	margin-bottom: 70px;
-}
-
-.mainSec {
-    height:100%;
-    margin-bottom: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-	height: 90vh;
-	min-height: 558.6px;
-}
-
-#myWorkButton {
-	margin-top: 20%;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 14px;
-	border: solid 2px #91CCC8;
-	width: 120px;
-	height: 35px;
-	text-align: center;
-	padding-top: 5px;
-	cursor: pointer;
-}
-
-#myWorkButton:hover {
-	background-color: #91CCC8;
-	color: white;
-	transition: all .5s ease;
-}
-
-#character {
-	width: 50%;
-	height: auto;
-}
-
-#characterDiv {
-	display: none;
-	width: 35%;
-	margin-bottom: 100px;
-}
-
-#pionear-promotional-site {
-		/*position: relative;*/
-	left: -1000px;
-}
-
-#scifi-tv {
-		/*position: relative;*/
-	right: -1000px;
-}
-
-#campers-guide {
-	left: -1000px;
-}
-
-#pionear {
-	right: -1000px;
-}
-
-@media screen and (min-width: 769px) {
-	#headerDiv {
-		display: flex;
-	}
-
-	#logoImage {
-		width: 30px;
-		height: 30px;
-		margin-top: 20px;
-		margin-left: 15px;
-		padding: 0;
-		display: block;
-	}
-
-	#logoText {
-		font-family: 'Open Sans', sans-serif;
-		flex-grow: 1;
-		margin-top: 25px;
-		margin-left: 15px;
-		text-align: left;
-	}
-
-	#hamburger {
-		display: none;
-	}
-
-	hr {
-		opacity: 1;
-		margin-left: 59px;
-		margin-right: 50px;
-		margin-top: 14px;
-		border-style: solid;
-		border-width: .25px;
-		color: #91CCC8;
-		display: block;
-	}
-
-	.mainNav {
-		padding-top: 0;
-		margin-top: 15px;
-		margin-right: 50px;
-		width: auto;
-		background-color: white;
-		height: auto;
-		box-shadow: 0px 0px;
-	}
-
-	.mainLinks {
-		display: inline-block;
-		margin-left: 55px;
-		font-family: 'PT Sans', sans-serif;
-		text-decoration: none;
-		color: #1f1f1f;
-		font-size: 16px;
-		padding-top: 15px;
-		transition: all .2s ease;
-	}
-
-	.mainLinks:hover {
-		color: #91CCC8;
-	}
-
-	.menuChange {
-		opacity: 1;
-	}
-
-	.mainHdg {
-		font-family: 'Century', serif;
-		font-size: 3.5em;
-		letter-spacing: 3px;
-	}
-
-	#mainDesc {
-		margin-top: 8%;
-		font-family: 'Open Sans', sans-serif;
-		font-size: 20px;
-	}
-
-	.mainSec {
-	    width: 90%;
-	    margin: 0 auto;
-	}
-
-	#myWorkButton {
-		margin-top: 8%;
-		font-family: 'Open Sans', sans-serif;
-		font-size: 16px;
-		border: solid 2px #91CCC8;
-		width: 150px;
-		height: 30px;
-		text-align: center;
-		padding-top: 5px;
-		cursor: pointer;
-	}
-
-	#myWorkButton:hover {
-		background-color: #91CCC8;
-		color: white;
-		transition: all .5s ease;
-	}
-
-	#character {
-		width: 50%;
-		height: auto;
-	}
-}
-
-@media screen and (min-width: 1024px) {
-	#characterDiv {
-		display: block;
-		align-self: center;
-		width: 35%;
-	}
-
-	#headerCopy {
-		width: 35.4166666667%;
-	}
-
-	#pionear-promotional-site {
-		/*position: relative;*/
-		left: -1000px;
-	}
-
-	#scifi-tv {
-		/*position: relative;*/
-		right: -1000px;
-	}
-
-	#campers-guide {
-		left: -1000px;
-	}
-
-	#pionear {
-		right: -1000px;
-	}
-}
-
-/*ABOUT*/
-
-#contactQ {
-	margin-top: 10%;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 14px;
-	line-height: 25px;
-}
-
-#messageHail {
-	margin-top: 13%;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 14px;
-}
-
-.header {
-	width: 80%;
-	margin: 0 auto;
-	margin-top: 20%;
-	align-self: center;
-}
-
-.mainHdgContact {
-	font-family: 'Century', serif;
-	font-size: 2em;
-	letter-spacing: 3px;
-}
-
-label {
-	display: block;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 12px;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	margin-top: 15px;
-	margin-bottom: 15px;
-}
-
-#formDiv {
-	padding-top: 5%;
-	width: 80%;
-	margin: 0 auto;
-}
-
-#formDiv p {
-	font-family: 'Open Sans', sans-serif;
-	color: #69bcb7;
-	padding-top: 10px;
-}
-
-#submit {
-	display: block;
-	background-color: white;
-	border: solid 1px #4D4B4B;
-	width: 70px;
-	height: 30px;
-	font-family: 'Open Sans', sans-serif;
-	margin-top: 10px;
-}
-
-#name, #email {
-	width: 100%;
-	border: none;
-	border-bottom: solid 1px #4D4B4B;
-}
-
-textarea {
-	width: 100%;
-	border: solid 1px #4D4B4B;
-}
-
-@media screen and (min-width: 768px) {
-	.header {
-		margin-top: 8%;
-	}
-}
-
-@media screen and (min-width: 769px) {
-	.header {
-		width: 30%;
-		margin-top: 10px;
-		height: 450px;
-	}
-
-	#formDiv {
-		padding: 0;
-		width: 35%;
-		align-self: center;
-		height: 450px;
-		margin-top: 10px;
-	}
-
-	#contactQ {
-		margin-top: 5%;
-		font-size: 18px;
-	}
-}
-
-/* ABOUT */
-
-.headerAbout {
-	width: 80%;
-	align-self: center;
-	margin-top: 20%;
-}
-
-.aboutBlurb {
-	font-family: 'Open Sans', sans-serif;
-	margin-top: 20px;
-	line-height: 25px;
-}
-
-#skills {
-	width: 80%;
-	height: auto;
-	align-self: center;
-}
-
-.skillsHdg {
-	font-family: 'Century', serif;
-	font-size: 18px;
-	margin-bottom: 12px;
-	margin-top: 12%;
-}
-
-.skillsLi {
-	font-family: 'Open Sans', sans-serif;
-	list-style: none;
-	margin-bottom: 12px;
-	font-size: 12px;
-}
-
-#list1 {
-	width: 50%;
-	float: left;
-}
-
-#list2 {
-	width: 50%;
-	float: right;
-}
-
-#edu {
-	width: 80%;
-}
-
-.indEdu {
-	width: 100%;
-	margin-bottom: 8%;
-}
-
-.eduGroup {
-	width: 100%;
-	display: block;
-}
-
-.schoolName {
-	margin-top: 10px;
-	font-family: 'PT Sans', sans-serif;
-	font-size: 16px;
-	font-weight: 600;
-	color: #6f9693;
-}
-
-.progName {
-	margin-top: 10px;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 14px;
-}
-
-.degreeName {
-	margin-top: 10px;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 14px;
-}
-
-@media screen and (min-width: 767px) {
-	.indEdu {
-		width: 30%;
-	}
-
-	.eduGroup {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-	}
-
-	.headerAbout {
-		margin-top: 8%;
-	}
-
-	.skillsHdg {
-		margin-top: 20px;
-	}
-}
-
-@media screen and (min-width: 1025px) {
-	#skills {
-		padding: 0;
-		width: 20%;
-		margin-top: 80px;
-	}
-
-	.headerAbout {
-		margin-top: 0;
-		width: 40%;
-		margin-top: 80px;
-	}
-
-	#list1 {
-		width: 100%;
-	}
-
-	#list2 {
-		width: 100%;
-	}
-
-	#edu {
-	} 
-
-	.eduGroup {
-		width: 70%;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-	.eduGroup {
-		width: 60%;
-	}
-}
-
-/*@media screen and (min-width: 1024px) {
-	.eduGroup {
-		width: 50%;
-	}
-}*/
-
-/* Work List */
-
-#workListCont {
-	max-width: 100vw;
-	overflow-x: hidden;
-	display: flex;
-	flex-wrap: wrap;
-}
-
-#workListCont a {
-	display: block;
-	width: 100%;
-	text-decoration: none;
-	color: black;
-	box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
-	position: relative;
-	transition: right 1.2s ease, left 1.2s ease;
-}
-
-.workListDivs {
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.workListFix {
-	position: absolute;
-	display: flex;
-	z-index: 1;
-	height: 100%;
-	width: 100%;
-}
-
-.workListImgs {
-	width: 100%;
-	height: 225px;
-	background-size: cover;
-	background-position: center;
-}
-
-.workListContent {
-	width: 100%;
-	height: 200px;
-	transition: background-color .5s ease;
-}
-
-.workListContent h2 {
-	text-align: center;
-	padding-top: 30px;
-	padding-right: 20px;
-	padding-left: 20px;
-	font-family: 'Century', serif;
-	font-weight: 100;
-	text-transform: uppercase;
-}
-
-.workListContent p {
-	width: 80%;
-	margin: 0 auto;
-	text-align: center;
-	padding-top: 30px;
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 200;
-	font-size: 15px;
-	line-height: 30px;
-}
-
-@media screen and (min-width: 768px) {
-	#workListCont a {
-		width: 100%;
-	}
-
-	.workListImgs {
-		width: 50%;
-		height: 300px;
-		background-size: cover;
-		background-position: center;
-	}
-
-	.workListContent {
-		width: 50%;
-		height: 300px;
-	}
-
-	.workListContent h2 {
-		padding-top: 50px;
-		word-spacing: 5px;
-		line-height: 35px;
-	}
-
-	.workListContent p {
-		padding-top: 40px;
-		font-size: 17px;
-		width: 70%;
-		line-height: 28px;
-	}
-}
-
-@media screen and (min-width: 1025px) {
-	#workListCont a {
-		display: block;
-		width: 50%;
-	}
-
-	.workListImgs {
-		width: 50%;
-		height: 300px;
-		background-size: cover;
-		background-position: center;
-	}
-
-	.workListContent {
-		width: 50%;
-		height: 300px;
-	}
-
-	.workListContent h2 {
-		padding-top: 50px;
-		word-spacing: 5px;
-		line-height: 35px;
-	}
-
-	.workListContent p {
-		padding-top: 40px;
-		font-size: 17px;
-		width: 70%;
-		line-height: 28px;
-	}
-}
-
-/* Footer */
-
-footer {
-	height: 25vh;
-	min-height: 150px;
-}
-
-footer div {
-	width: 300px;
-	margin: 0 auto;
-}
-
-footer img {
-	padding-top: 50px;
-	width: 40px;
-	display: block;
-	margin: 0 auto;
-}
-
-footer p {
-	font-family: 'Segoe UI';
-	text-align: center;
-	padding-top: 15px;
-	font-size: 13px;
-	opacity: .8;
-}
-
-footer p:last-child {
-	margin-bottom: 20px;
-}
 
 /* Individual Work */
 

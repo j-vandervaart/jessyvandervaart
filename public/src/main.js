@@ -13,6 +13,10 @@ const routes = [
 		component: Works
 	},
 	{
+		path: '/:redirect',
+		redirect: '/'
+	},
+	{
 		path: '/work/:proj_id',
 		component: Work
 	}
@@ -31,5 +35,3 @@ new Vue({
   router: router,
   render: h => h(App)
 });
-
-// custom js
