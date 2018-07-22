@@ -1,7 +1,7 @@
 <template>
 
 <section>
-    <div class="workHeaderImg" v-bind:style="{ 'background-image': 'url(/images/' + work.proj_id + '.jpg)' }"></div>
+    <div class="workHeaderImg" v-bind:style="{ 'background-image': 'url(/images/' + work.proj_id + '-c.jpg)' }"></div>
     <div class="indWorkCont">
       <div class="workTitleDiv">
         <h2>{{work.project_name}}</h2>
@@ -79,7 +79,7 @@
             if(window.innerWidth > 1024) {
               // console.log(window.innerHeight);
               // console.log(this.$el.querySelector(".mockupDiv").getBoundingClientRect().top);
-              if((window.innerHeight - this.$el.querySelector(".mockupDiv").getBoundingClientRect().top) > 100) {
+              if((window.innerHeight - this.$el.querySelector(".mockupDiv").getBoundingClientRect().top) > 30) {
                 this.$el.querySelector(".mockupDiv").style.left = "0px";
                 this.$el.querySelector(".mockupDiv").style.opacity = "1";
                 this.$el.querySelector("#objectiveText").style.right = "0px";

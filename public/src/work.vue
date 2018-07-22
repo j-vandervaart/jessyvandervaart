@@ -28,13 +28,27 @@
         <div id="workListContainer">
             <router-link class="workAnchors" v-for="work in works" v-bind:key="work.id" :to="`/work/${work.proj_id}`">
                 <div class="workSquares" v-bind:id="work.proj_id" v-bind:style="{ 'background-image': 'url(./images/' + work.proj_id + '.jpg)' }">
-                    <!-- <div class="workListImgs" v-bind:style="{ 'background-image': 'url(./images/' + work.proj_id + '.jpg)' }"></div> -->
-                    <!-- <div class="workListContent">
-                        <h2>{{work.project_name}}</h2>
-                        <p>{{work.desc}}</p>
+                    <div @mouseenter="hoverEnter" @mouseleave="hoverLeave" class="hoverTitle">
+                        <h2 class="hoverH2">{{work.project_name}}</h2>
+                        <p class="hoverP">{{work.desc}}</p>
                     </div>
- -->            </div>
+                </div>
             </router-link>
+        </div>
+    </section>
+    <section id="About">
+        <div id="aboutContainer">
+            <h1>A Little Bit About Me</h1>
+            <div id="aboutPara">
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
+            </div>
+            <div id="aboutImages">
+                <img id="img1" src="/images/brandon.jpg" alt="River Scenery">
+                <img src="/images/shubby_bw.jpg" alt="My Dog Charlie" id="img2">
+                <img src="/images/canoe_bw.jpg" alt="Paddling in Northern Ontario" id="img3">
+                <img src="/images/cat_bw.jpg" alt="My Cat" id="img4">
+            </div>
         </div>
     </section>
 </section>
@@ -67,6 +81,15 @@
             scrollTo: function() {
                 this.scrollClick = this.$el.querySelector("#Work");
                 TweenLite.to(window, 1.5, {scrollTo: this.scrollClick, ease:Power2.easeOut});
+            },
+            hoverEnter: function(e) {
+                console.log(e);
+                e.target.childNodes[0].classList.add("hoverTitleToggle");
+                e.target.childNodes[2].classList.add("hoverTitleToggle");
+            },
+            hoverLeave: function(e) {
+                e.target.childNodes[0].classList.remove("hoverTitleToggle");
+                e.target.childNodes[2].classList.remove("hoverTitleToggle");
             }
         },
         created: function() {

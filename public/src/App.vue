@@ -81,13 +81,13 @@
                     this.navTrigger = true;
 
                     if(this.hamburg.classList[0] == null && this.work1 > 50) {
-                        console.log(1);
+                        // console.log(1);
                         this.hamOne.classList.remove("hamColor");
                         this.hamTwo.classList.remove("hamColor");
                     }else if(this.hamburg.classList[0] == null && this.work1 < 50) {
                         this.hamOne.classList.add("hamColor");
                         this.hamTwo.classList.add("hamColor");
-                        console.log(2);
+                        // console.log(2);
                     }
                 }else {
                     this.navTrigger = false;
@@ -128,10 +128,10 @@
                 this.hamTwo = this.$el.querySelector(".hamTwo");
                 this.work = this.$el.querySelector("#Work");
                 if(this.test) {
-                    console.log(2342342);
+                    // console.log(2342342);
                     this.work1 = this.work.getBoundingClientRect().top;
                     this.work2 = this.work.getBoundingClientRect().bottom;
-                    console.log(this.hamburg.classList[0] == "growMenu");
+                    // console.log(this.hamburg.classList[0] == "growMenu");
                     if(this.hamburg.classList[0] == "growMenu") {
                         this.hamOne.classList.add("hamColor");
                         this.hamTwo.classList.add("hamColor");
@@ -144,7 +144,7 @@
                         this.hamTwo.classList.remove("hamColor");
                     }
                 } else {
-                    console.log('no');
+                    // console.log('no');
                 }
             }
         }

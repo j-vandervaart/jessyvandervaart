@@ -476,11 +476,11 @@ nav {
 }
 
 #workContainer h1 {
-	font-size: 21px;
+	font-size: 24px;
 	text-transform: uppercase;
 	color: white;
 	font-family: 'Raleway Light';
-	padding-top: 10vh;
+	padding-top: 8vh;
 	letter-spacing: 3px;
 	width: 100%;
 	line-height: 20px;
@@ -490,8 +490,8 @@ nav {
 	color: white;
 	font-family: Open Sans Light;
 	margin-top: 4vh;
-	line-height: 22px;
-	font-size: 14px;
+	line-height: 24px;
+	font-size: 16px;
 	/*word-spacing: 2px;*/
 	width: 100%;
 }
@@ -505,7 +505,7 @@ nav {
 
 #workListContainer {
 	width: 90%;
-	padding-top: 70px;
+	padding-top: 50px;
 	margin: 0 auto;
 	position: relative;
 	padding-bottom: 100px;
@@ -514,6 +514,7 @@ nav {
 .workAnchors {
 	display: block;
 	width: 90vw;
+	text-decoration: none;
 	/*height: 100vw;*/
 }
 
@@ -521,6 +522,36 @@ nav {
 	height: 90vw;
 	background-size: cover;
 	background-position: center;
+}
+
+.hoverTitle {
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0,0,0,0.7);
+	transition: background-color .7s ease;
+	display: flex;
+	flex-wrap: wrap;
+	/*justify-content: center;*/
+	align-content: center;
+	box-sizing: border-box;
+	padding: 10%;
+}
+
+.hoverH2 {
+	font-family: 'Raleway Medium';
+	text-transform: uppercase;
+	color: white;
+	font-size: 22px;
+	text-align: left;
+	line-height: 28px;
+	margin-bottom: 30px;
+}
+
+.hoverP {
+	font-family: 'Raleway';
+	color: white;
+	font-size: 15px;
+	line-height: 24px;
 }
 
 @media screen and (min-width: 768px) {
@@ -552,6 +583,10 @@ nav {
 		width: 31%;
 	}
 
+	#scifi-tv:hover {
+		background-image: url('./images/scifi-tv-c.jpg');
+	}
+
 	#campers-guide {
 		height: 19vw;
 		position: absolute;
@@ -569,6 +604,18 @@ nav {
 		right: 0;
 		width: 31%;
 		top: 0;
+	}
+
+	.hoverH2 {
+		font-family: 'Raleway Medium';
+		font-size: 16px;
+		margin-bottom: 15px;
+	}
+
+	.hoverP {
+		font-family: 'Raleway';
+		font-size: 13px;
+		line-height: 20px;
 	}
 }
 
@@ -608,6 +655,171 @@ nav {
 
 	#pionear {
 		height: 30vw;
+	}
+
+	.hoverTitle {
+		background-color: rgba(0,0,0,0);
+		transition: background-color .7s ease;
+	}
+
+	.hoverTitle:hover {
+		background-color: rgba(0,0,0,0.5);
+	}
+
+	.hoverH2 {
+		opacity: 0;
+		transition: opacity .7s ease;
+		font-size: 22px;
+		line-height: 30px;
+	}
+
+	.hoverP {
+		opacity: 0;
+		transition: opacity .7s ease;
+		font-size: 15px;
+	}
+
+	.hoverTitleToggle {
+		opacity: 1;
+	}
+
+}
+
+@media screen and (min-width: 2000px) {
+	
+	#workContainer h1 {
+		font-size: 36px;
+	}
+
+	#workContainer p {
+		font-size: 25px;
+		line-height: 35px;
+	}
+
+	#workListContainer {
+		padding-bottom: 100px;
+	}
+}
+
+/* About */
+
+#About {
+
+}
+
+#aboutContainer {
+	width: 90%;
+	margin: 0 auto;
+	padding-bottom: 50px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+#aboutContainer h1 {
+	padding-top: 8vh;
+	font-family: 'Wagner Condensed';
+	font-size: 40px;
+	width: 250px;
+	line-height: 50px;
+}
+
+#aboutPara {
+	width: 100%;
+}
+
+#aboutPara p {
+	font-family: 'Open Sans Light';
+	font-size: 16px;
+	line-height: 24px;
+	margin-top: 4vh; 
+}
+
+#aboutImages {
+	width: 100%;
+	position: relative;
+	display: none;
+}
+
+#img1 {
+	position: absolute;
+	width: 30%;
+	z-index: 2;
+}
+
+#img2 {
+	width: 50%;
+	position: absolute;
+	top: 10%;
+	right: 0;
+	z-index: 2;
+}
+
+#img3 {
+	width: 70%;
+	position: absolute;
+	top: 25%;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#img4 {
+	width: 40%;
+	margin-top: 50%;
+	/*position: relative;*/
+	z-index: 2;
+	/*position: absolute;*/
+	/*top: 60%;*/
+	/*bottom: 0;*/
+}
+
+@media screen and (min-width: 768px) {
+	#aboutPara {
+		width: 38%;
+	}
+
+	#aboutImages {
+		width: 50%;
+		display: block;
+	}
+
+	#aboutContainer h1 {
+		padding-right: 60%;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	#img4 {
+		top: 80%;
+	}
+}
+
+@media screen and (min-width: 1025px) {
+	#aboutContainer {
+		width: 70%;
+		padding-bottom: 100px;
+	}
+
+	#aboutPara {
+		width: 25%;
+	}
+
+	#aboutImages {
+		width: 65%;
+	}
+
+	#img1 {
+		width: 20%;
+	}
+
+	#img2 {
+		width: 40%;
+	}
+
+	#img4 {
+		top: 70%;
 	}
 }
 
