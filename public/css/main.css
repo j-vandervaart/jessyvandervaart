@@ -738,41 +738,39 @@ nav {
 #aboutImages {
 	width: 100%;
 	position: relative;
-	display: none;
+	/*display: none;*/
 }
 
-#img1 {
-	position: absolute;
-	width: 30%;
-	z-index: 2;
+#aboutImages img {
+	position: relative;
+	display: block;
+	width: 100%;
+	margin: 0 auto;
 }
 
-#img2 {
-	width: 50%;
-	position: absolute;
-	top: 10%;
-	right: 0;
-	z-index: 2;
+#aboutImages h4 {
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	margin-top: 20px;
 }
 
-#img3 {
-	width: 70%;
-	position: absolute;
-	top: 25%;
-	left: 0;
-	right: 0;
-	margin-left: auto;
-	margin-right: auto;
+#galleryButtons {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	margin-top: 20px;
 }
 
-#img4 {
-	width: 40%;
-	margin-top: 50%;
-	/*position: relative;*/
-	z-index: 2;
-	/*position: absolute;*/
-	/*top: 60%;*/
-	/*bottom: 0;*/
+#galleryButtons div {
+	width: 23%;
+    height: 4px;
+    background-color: rgba(112,112,112,.1);
+    /*border-radius: 50%;*/
+    /*background: none;*/
+    /*border: 1px solid #707070;*/
+    cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
@@ -791,9 +789,7 @@ nav {
 }
 
 @media screen and (min-width: 900px) {
-	#img4 {
-		top: 80%;
-	}
+
 }
 
 @media screen and (min-width: 1025px) {
@@ -810,16 +806,16 @@ nav {
 		width: 65%;
 	}
 
-	#img1 {
-		width: 20%;
+	#aboutImages img {
+		width: 80%;
 	}
 
-	#img2 {
-		width: 40%;
+	#aboutImages h4 {
+		width: 80%;
 	}
 
-	#img4 {
-		top: 70%;
+	#galleryButtons {
+		width: 80%;
 	}
 }
 

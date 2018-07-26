@@ -44,10 +44,18 @@
                 <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
             </div>
             <div id="aboutImages">
-                <img id="img1" src="/images/brandon.jpg" alt="River Scenery">
+                <img src="/images/shubby_bw.jpg" alt="">
+                <h4>My Dog "Charlie"</h4>
+                <!-- <img id="img1" src="/images/brandon.jpg" alt="River Scenery">
                 <img src="/images/shubby_bw.jpg" alt="My Dog Charlie" id="img2">
                 <img src="/images/canoe_bw.jpg" alt="Paddling in Northern Ontario" id="img3">
-                <img src="/images/cat_bw.jpg" alt="My Cat" id="img4">
+                <img src="/images/cat_bw.jpg" alt="My Cat" id="img4"> -->
+                <div id="galleryButtons">
+                    <div @click="changeImg" id="button0"></div>
+                    <div @click="changeImg" id="button1"></div>
+                    <div @click="changeImg" id="button2"></div>
+                    <div @click="changeImg" id="button3"></div>
+                </div>
             </div>
         </div>
     </section>
@@ -67,7 +75,30 @@
                 grayDivide: '',
                 missionState: '',
                 bottomDivide: '',
-                seeMore: ''
+                seeMore: '',
+                redDiv: '',
+                galH4: '',
+                galImg: '',
+                eVal: '',
+                galArr: [
+                    [
+                        '/images/shubby_bw.jpg',
+                        'My Dog "Charlie"',
+                    ],
+                    [
+                        '/images/cat_bw.jpg',
+                        'My cat "Cat"'
+                    ],
+                    [
+                        '/images/canoe_bw.jpg',
+                        'Paddling at Cypress Lake'
+                    ],
+                    [
+                        '/images/brandon.jpg',
+                        'Camping in Paisley, Ontario'
+                    ]
+                ],
+
             }
         },
         methods: {
@@ -90,10 +121,38 @@
             hoverLeave: function(e) {
                 e.target.childNodes[0].classList.remove("hoverTitleToggle");
                 e.target.childNodes[2].classList.remove("hoverTitleToggle");
+            },
+            scrolled: function() {
+                // console.log(234234);
+                // this.redDiv = this.$el.querySelector("#redDiv");
+
+                // setInterval(function() {
+                //     setTimeout(function() {
+                //         this.redDiv.style.opacity = "0";
+                //     },0);
+                //     setTimeout(function() {
+                //         this.redDiv.style.opacity = "1";
+                //     },2250); 
+                // }, 4500);
+            },
+            changeImg: function(e) {
+                this.eVal = e;
+                this.galImg = this.$el.querySelector("#aboutImages img");
+                this.galH4 = this.$el.querySelector("#aboutImages H4");
+                TweenLite.to([this.galImg, this.galH4], 1, {opacity:0, right: 100, onComplete: this.test});
+                // TweenLite.to([this.galImg, this.galH4], 1, {opacity:0,right:300});
+            },
+            test: function() {
+                console.log(2342);
+                TweenLite.to([this.galImg, this.galH4], 1, {opacity:1, right: 0});
+                var galleryIndex = this.eVal.target.id;
+                var arrayIndex = galleryIndex.slice(6);
+                this.galImg.src = this.galArr[arrayIndex][0];
+                this.galH4.innerHTML = this.galArr[arrayIndex][1];
             }
         },
         created: function() {
-            window.addEventListener('scroll', this.scrolled);
+            window.addEventListener('load', this.scrolled);
         },
         mounted: function() {
             this.nameDesc = this.$el.querySelector("#nameDesc");
