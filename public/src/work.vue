@@ -51,10 +51,10 @@
                 <img src="/images/canoe_bw.jpg" alt="Paddling in Northern Ontario" id="img3">
                 <img src="/images/cat_bw.jpg" alt="My Cat" id="img4"> -->
                 <div id="galleryButtons">
-                    <div @click="changeImg" id="button0"></div>
-                    <div @click="changeImg" id="button1"></div>
-                    <div @click="changeImg" id="button2"></div>
-                    <div @click="changeImg" id="button3"></div>
+                    <div class="buttonsInact active" @click="changeImg" id="button0"></div>
+                    <div class="buttonsInact" @click="changeImg" id="button1"></div>
+                    <div class="buttonsInact" @click="changeImg" id="button2"></div>
+                    <div class="buttonsInact" @click="changeImg" id="button3"></div>
                 </div>
             </div>
         </div>
@@ -80,6 +80,7 @@
                 galH4: '',
                 galImg: '',
                 eVal: '',
+                galDivs: '',
                 galArr: [
                     [
                         '/images/shubby_bw.jpg',
@@ -95,7 +96,7 @@
                     ],
                     [
                         '/images/brandon.jpg',
-                        'Camping in Paisley, Ontario'
+                        'Hawaiian shirts with friends'
                     ]
                 ],
 
@@ -123,28 +124,21 @@
                 e.target.childNodes[2].classList.remove("hoverTitleToggle");
             },
             scrolled: function() {
-                // console.log(234234);
-                // this.redDiv = this.$el.querySelector("#redDiv");
-
-                // setInterval(function() {
-                //     setTimeout(function() {
-                //         this.redDiv.style.opacity = "0";
-                //     },0);
-                //     setTimeout(function() {
-                //         this.redDiv.style.opacity = "1";
-                //     },2250); 
-                // }, 4500);
             },
             changeImg: function(e) {
+                this.galDivs = this.$el.querySelectorAll(".buttonsInact");
                 this.eVal = e;
                 this.galImg = this.$el.querySelector("#aboutImages img");
                 this.galH4 = this.$el.querySelector("#aboutImages H4");
-                TweenLite.to([this.galImg, this.galH4], 1, {opacity:0, right: 100, onComplete: this.test});
-                // TweenLite.to([this.galImg, this.galH4], 1, {opacity:0,right:300});
+                for(var i=0; i < this.galDivs.length; i++) {
+                    this.galDivs[i].classList.remove("active");
+                }
+                e.target.classList.add("active");
+                TweenLite.to([this.galImg, this.galH4], .8, {opacity:0, right: 50, onComplete: this.test});
             },
             test: function() {
                 console.log(2342);
-                TweenLite.to([this.galImg, this.galH4], 1, {opacity:1, right: 0});
+                TweenLite.to([this.galImg, this.galH4], .8, {opacity:1, right: 0});
                 var galleryIndex = this.eVal.target.id;
                 var arrayIndex = galleryIndex.slice(6);
                 this.galImg.src = this.galArr[arrayIndex][0];

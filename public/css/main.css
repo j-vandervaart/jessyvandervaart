@@ -738,6 +738,7 @@ nav {
 #aboutImages {
 	width: 100%;
 	position: relative;
+	margin-top: 20px;
 	/*display: none;*/
 }
 
@@ -750,6 +751,8 @@ nav {
 
 #aboutImages h4 {
 	position: relative;
+	font-family: Raleway;
+	font-size: 10px;
 	width: 100%;
 	margin: 0 auto;
 	margin-top: 20px;
@@ -763,14 +766,26 @@ nav {
 	margin-top: 20px;
 }
 
-#galleryButtons div {
+.buttonsInact {
 	width: 23%;
-    height: 4px;
-    background-color: rgba(112,112,112,.1);
+    height: 5px;
+    background-color: rgba(112,112,112);
+    opacity: .1;
     /*border-radius: 50%;*/
     /*background: none;*/
     /*border: 1px solid #707070;*/
     cursor: pointer;
+    transition: opacity .5s ease;
+}
+
+.buttonsInact:hover {
+	opacity: 1;
+	transition: opacity .5s ease;
+}
+
+.active {
+	opacity: 1;
+	/*background-color: rgb(112,112,112);*/
 }
 
 @media screen and (min-width: 768px) {
