@@ -56,10 +56,10 @@
         created: function() {
             var vm = this;
             axios.get('/api/work').then(function(response) {
-                // console.log(response);
+                console.log(response);
                 vm.works = response.data;
             });
-            window.addEventListener('scroll', this.handleScroll);
+            // window.addEventListener('scroll', this.handleScroll);
         },
         methods: {
             hamburgSlide: function() {
