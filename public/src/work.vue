@@ -38,7 +38,8 @@
     </section>
     <section id="About">
         <div id="aboutContainer">
-            <h1>A Little Bit About Me</h1>
+            <pre>A Little Bit 
+About Me</pre>
             <div id="aboutPara">
                 <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
                 <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
@@ -57,6 +58,14 @@
                     <div class="buttonsInact" @click="changeImg" id="button3"></div>
                 </div>
             </div>
+        </div>
+    </section>
+    <section id="Skills">
+        <div id="skillsSec">
+            <h1>Skills</h1>
+        </div>
+        <div id="eduSec">
+            <h1>Education</h1>
         </div>
     </section>
 </section>
@@ -81,6 +90,12 @@
                 galImg: '',
                 eVal: '',
                 galDivs: '',
+                galleryIndex: '',
+                arrayIndex: '',
+                imgIncrement: '',
+                activeOne: '',
+                activeOneId: '',
+                babb: '',
                 galArr: [
                     [
                         '/images/shubby_bw.jpg',
@@ -99,7 +114,9 @@
                         'Hawaiian shirts with friends'
                     ]
                 ],
-
+                about: '',
+                about1: '',
+                about2: ''
             }
         },
         methods: {
@@ -115,7 +132,6 @@
                 TweenLite.to(window, 1.5, {scrollTo: this.scrollClick, ease:Power2.easeOut});
             },
             hoverEnter: function(e) {
-                console.log(e);
                 e.target.childNodes[0].classList.add("hoverTitleToggle");
                 e.target.childNodes[2].classList.add("hoverTitleToggle");
             },
@@ -123,7 +139,35 @@
                 e.target.childNodes[0].classList.remove("hoverTitleToggle");
                 e.target.childNodes[2].classList.remove("hoverTitleToggle");
             },
-            scrolled: function() {
+            galleryTimer: function() {
+                this.about = this.$el.querySelector("#About");
+                this.about1 = this.about.getBoundingClientRect().top;
+                this.about2 = this.about.getBoundingClientRect().bottom;
+                // if(this.about1 < 300 && this.about2 > -300) {
+                    setInterval(this.timer, 4000);
+                // }
+            },
+            timer: function() {
+                this.galDivs = this.$el.querySelectorAll(".buttonsInact");
+                this.galImg = this.$el.querySelector("#aboutImages img");
+                this.galH4 = this.$el.querySelector("#aboutImages H4");
+                this.activeOne = this.$el.querySelector(".active");
+
+                
+                this.activeOneId = parseInt(this.activeOne.id.slice(6));
+
+                if(this.activeOneId == 3) {
+                        this.activeOneId = -1;
+                }
+                this.babb = this.activeOneId+1;
+                for(var i=0; i < this.galDivs.length; i++) {
+                    this.galDivs[i].classList.remove("active");
+                }
+                this.galDivs[this.babb].classList.add("active");
+
+                
+                this.galImg.src = this.galArr[this.babb][0];
+                this.galH4.innerHTML = this.galArr[this.babb][1];
             },
             changeImg: function(e) {
                 this.galDivs = this.$el.querySelectorAll(".buttonsInact");
@@ -134,19 +178,18 @@
                     this.galDivs[i].classList.remove("active");
                 }
                 e.target.classList.add("active");
-                TweenLite.to([this.galImg, this.galH4], .8, {opacity:0, right: 50, onComplete: this.test});
+                TweenLite.to([this.galImg, this.galH4], .4, {opacity:0, onComplete: this.fadeImg});
             },
-            test: function() {
-                console.log(2342);
-                TweenLite.to([this.galImg, this.galH4], .8, {opacity:1, right: 0});
-                var galleryIndex = this.eVal.target.id;
-                var arrayIndex = galleryIndex.slice(6);
-                this.galImg.src = this.galArr[arrayIndex][0];
-                this.galH4.innerHTML = this.galArr[arrayIndex][1];
+            fadeImg: function() {
+                TweenLite.to([this.galImg, this.galH4], .4, {opacity:1, right: 0});
+                this.galleryIndex = this.eVal.target.id;
+                this.arrayIndex = this.galleryIndex.slice(6);
+                this.galImg.src = this.galArr[this.arrayIndex][0];
+                this.galH4.innerHTML = this.galArr[this.arrayIndex][1];
             }
         },
         created: function() {
-            window.addEventListener('load', this.scrolled);
+            window.addEventListener('load', this.galleryTimer);
         },
         mounted: function() {
             this.nameDesc = this.$el.querySelector("#nameDesc");

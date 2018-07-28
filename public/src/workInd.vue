@@ -49,7 +49,7 @@
           var vm = this;
           var test = this.$route.params.proj_id;
           // console.log(test);
-          axios.get(`http://localhost:3000/api/work/${test}`).then(function(response) {
+          axios.get(`/api/work/${test}`).then(function(response) {
             vm.work = response.data;
             // console.log(response);
             var index = vm.next.findIndex(x => x == response.data.proj_id);

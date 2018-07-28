@@ -704,7 +704,6 @@ nav {
 /* About */
 
 #About {
-
 }
 
 #aboutContainer {
@@ -716,11 +715,11 @@ nav {
 	justify-content: space-between;
 }
 
-#aboutContainer h1 {
+#aboutContainer pre {
 	padding-top: 8vh;
 	font-family: 'Wagner Condensed';
 	font-size: 40px;
-	width: 250px;
+	width: 100%;
 	line-height: 50px;
 }
 
@@ -797,14 +796,6 @@ nav {
 		width: 50%;
 		display: block;
 	}
-
-	#aboutContainer h1 {
-		padding-right: 60%;
-	}
-}
-
-@media screen and (min-width: 900px) {
-
 }
 
 @media screen and (min-width: 1025px) {
@@ -834,7 +825,43 @@ nav {
 	}
 }
 
+/* Skills */
 
+#Skills {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#skillsSec {
+	box-sizing: border-box;
+	background-color: #E2E1E1;
+	height: 200px;
+	width: 100%;
+	padding-left: 5%;
+}
+
+#eduSec {
+	box-sizing: border-box;
+	background-color: #1c1c1c;
+	height: 200px;
+	width: 100%;
+	padding-left: 5%;
+}
+
+#Skills h1 {
+	font-family: 'Raleway Light';
+	font-size: 28px;
+}
+
+@media screen and (min-width: 1024px) {
+	#skillsSec {
+		width: 50%;
+	}
+
+	#eduSec {
+		width: 50%;
+	}
+}
 
 .fade-enter-active, .fade-leave-active {
   transition-property: opacity;

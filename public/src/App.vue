@@ -46,6 +46,8 @@
                 work: '',
                 work1: '',
                 work2: '',
+                about: '',
+                about1: '',
                 test: '',
                 navTrigger: true,
                 test2: ''
@@ -53,7 +55,7 @@
         },
         created: function() {
             var vm = this;
-            axios.get('http://localhost:3000/api/work').then(function(response) {
+            axios.get('/api/work').then(function(response) {
                 // console.log(response);
                 vm.works = response.data;
             });
@@ -84,10 +86,13 @@
                         // console.log(1);
                         this.hamOne.classList.remove("hamColor");
                         this.hamTwo.classList.remove("hamColor");
-                    }else if(this.hamburg.classList[0] == null && this.work1 < 50) {
+                    }else if(this.hamburg.classList[0] == null && (this.work1 < 50 && this.work2 > 50)) {
                         this.hamOne.classList.add("hamColor");
                         this.hamTwo.classList.add("hamColor");
                         // console.log(2);
+                    }else if(this.hamburg.classList[0] == null && this.about1 < 50) {
+                        this.hamOne.classList.remove("hamColor");
+                        this.hamTwo.classList.remove("hamColor");
                     }
                 }else {
                     this.navTrigger = false;
@@ -108,14 +113,6 @@
                 this.hamTwo.classList.remove("hamTwoChange");
                 this.navDiv.classList.remove("navDivChange");
 
-                if(this.hamburg.classList[0] == "growMenu") {
-                    this.hamOne.classList.add("hamColor");
-                    this.hamTwo.classList.add("hamColor");
-                        // console.log(345345345);
-                }else if(this.work1 < 50) {
-                    this.hamOne.classList.add("hamColor");
-                    this.hamTwo.classList.add("hamColor");
-                }   
                 if(this.test) {
                     this.scrollToElement = "#"+e.target.innerHTML;
                     TweenLite.to(window, 1.5, {scrollTo: this.scrollToElement, ease:Power2.easeOut});
@@ -127,18 +124,22 @@
                 this.hamOne = this.$el.querySelector(".hamOne");
                 this.hamTwo = this.$el.querySelector(".hamTwo");
                 this.work = this.$el.querySelector("#Work");
+                this.about = this.$el.querySelector("#About");
                 if(this.test) {
                     // console.log(2342342);
                     this.work1 = this.work.getBoundingClientRect().top;
                     this.work2 = this.work.getBoundingClientRect().bottom;
-                    // console.log(this.hamburg.classList[0] == "growMenu");
+                    this.about1 = this.about.getBoundingClientRect().top;
                     if(this.hamburg.classList[0] == "growMenu") {
                         this.hamOne.classList.add("hamColor");
                         this.hamTwo.classList.add("hamColor");
                         // console.log(345345345);
-                    }else if(this.work1 < 50) {
+                    }else if(this.work1 < 50 && this.work2 > 50) {
                         this.hamOne.classList.add("hamColor");
                         this.hamTwo.classList.add("hamColor");
+                    }else if(this.about1 < 50) {
+                        this.hamOne.classList.remove("hamColor");
+                        this.hamTwo.classList.remove("hamColor");
                     }else {
                         this.hamOne.classList.remove("hamColor");
                         this.hamTwo.classList.remove("hamColor");
