@@ -527,11 +527,10 @@ nav {
 .hoverTitle {
 	height: 100%;
 	width: 100%;
-	background-color: rgba(0,0,0,0.7);
+	background-color: rgba(0,0,0,0.75);
 	transition: background-color .7s ease;
 	display: flex;
 	flex-wrap: wrap;
-	/*justify-content: center;*/
 	align-content: center;
 	box-sizing: border-box;
 	padding: 10%;
@@ -768,23 +767,14 @@ nav {
 .buttonsInact {
 	width: 23%;
     height: 5px;
-    background-color: rgba(112,112,112);
+    background-color: rgb(112,112,112);
     opacity: .1;
-    /*border-radius: 50%;*/
-    /*background: none;*/
-    /*border: 1px solid #707070;*/
     cursor: pointer;
     transition: opacity .5s ease;
 }
 
-.buttonsInact:hover {
-	opacity: 1;
-	transition: opacity .5s ease;
-}
-
 .active {
 	opacity: 1;
-	/*background-color: rgb(112,112,112);*/
 }
 
 @media screen and (min-width: 768px) {
@@ -822,6 +812,11 @@ nav {
 
 	#galleryButtons {
 		width: 80%;
+	}
+
+	.buttonsInact:hover {
+		opacity: 1;
+		transition: opacity .5s ease;
 	}
 }
 

@@ -143,9 +143,8 @@ About Me</pre>
                 this.about = this.$el.querySelector("#About");
                 this.about1 = this.about.getBoundingClientRect().top;
                 this.about2 = this.about.getBoundingClientRect().bottom;
-                // if(this.about1 < 300 && this.about2 > -300) {
-                    setInterval(this.timer, 4000);
-                // }
+
+                setInterval(this.timer, 4000);
             },
             timer: function() {
                 this.galDivs = this.$el.querySelectorAll(".buttonsInact");
