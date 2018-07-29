@@ -63,9 +63,86 @@ About Me</pre>
     <section id="Skills">
         <div id="skillsSec">
             <h1>Skills</h1>
+            <div id="skillsUnderline"></div>
+            <h2>Code</h2>
+            <div class="skillDivs">
+                <div>
+                    <p>HTML5</p>
+                    <p>CSS3</p>
+                    <p>Sass</p>
+                </div>
+                <div>
+                    <p>MongoDB</p>
+                    <p>PHP</p>
+                    <p>MySql</p>
+                </div>
+                <div>
+                    <p>JavaScript</p>
+                    <p>Vue JS</p>
+                    <p>Node JS</p>
+                </div>
+                <div>
+                    <p>Laravel</p>
+                    <p>wepback</p>
+                </div>
+            </div>
+            <h2>Tools</h2>
+            <div class="skillDivs">
+                <div>
+                    <p>MongoDB</p>
+                    <p>PHP</p>
+                    <p>MySql</p>
+                </div>
+                <div>
+                    <p>JavaScript</p>
+                    <p>Vue JS</p>
+                    <p>Node JS</p>
+                </div>
+            </div>
         </div>
         <div id="eduSec">
             <h1>Education</h1>
+            <div id="eduUnderline"></div>
+            <div class="eduDivs">
+                <div>
+                    <h3>Fanshawe College</h3>
+                    <p>Graduate Diploma, Interactive Media Specialist</p>
+                </div>
+                <div>
+                    <h3>Western University</h3>
+                    <p>BA, Media Studies</p>
+                </div>
+                <div>
+                    <h3>Fanshawe College</h3>
+                    <p>Diploma, Television Broadcasting</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Contact">
+        <pre>Contact 
+Me</pre>
+        <div id="contactBlurb">
+            <p>Please feel free to send me an email to inquire about any of my work, or to discuss the possibility of working together.</p>
+            <div></div>
+        </div>
+        <div id="formDiv">
+            <form method="POST" @submit.prevent="postMail">
+                <transition name="fade-input">
+                    <p v-if="error.message == 'Please fill in all fields'">Please fill in all fields</p>
+                    <p v-else-if="error.message == 'Your message has been sent!'">Your message has been sent!</p>
+                </transition>
+                <label for="name">Name:</label>
+                <input autocomplete="name" type="text" id="name" name="name" v-model="Email.name">
+                <label for="email">Email Address:</label>
+                <input autocomplete="email" type="text" id="email" name="email" v-model="Email.email">
+                <transition name="fade">
+                    <p v-if="error.message == 'Please provide a valid email address'">Please provide a valid email address</p>
+                </transition>
+                <label for="message">Message:</label>
+                <textarea name="message" id="message" v-model="Email.message" cols="30" rows="10"></textarea>
+                <input id="submit" type="submit" value="Send">
+            </form>
         </div>
     </section>
 </section>
@@ -116,7 +193,9 @@ About Me</pre>
                 ],
                 about: '',
                 about1: '',
-                about2: ''
+                about2: '',
+                Email: {name: '', email: '', message: ''},
+                error: {message: ''}
             }
         },
         methods: {
@@ -152,7 +231,8 @@ About Me</pre>
                 this.galH4 = this.$el.querySelector("#aboutImages H4");
                 this.activeOne = this.$el.querySelector(".active");
 
-                
+                this.activeOne.style.width = "23%";
+                this.activeOne.style.marginRight = "0%";
                 this.activeOneId = parseInt(this.activeOne.id.slice(6));
 
                 if(this.activeOneId == 3) {
@@ -161,6 +241,8 @@ About Me</pre>
                 this.babb = this.activeOneId+1;
                 for(var i=0; i < this.galDivs.length; i++) {
                     this.galDivs[i].classList.remove("active");
+                    // this.galDivs[i].style.width = "1%";
+                    // this.galDivs[i].style.marginRight "22%";
                 }
                 this.galDivs[this.babb].classList.add("active");
 
@@ -185,6 +267,22 @@ About Me</pre>
                 this.arrayIndex = this.galleryIndex.slice(6);
                 this.galImg.src = this.galArr[this.arrayIndex][0];
                 this.galH4.innerHTML = this.galArr[this.arrayIndex][1];
+            },
+            postMail() {
+
+                var newEmail = {
+                    name: this.Email.name,
+                    email: this.Email.email,
+                    message: this.Email.message
+                }
+                // console.log(newEmail);
+
+                var vm = this;
+                axios.post('/contact', newEmail).then(function(response){
+                    // console.log(response.data.response);
+                    vm.error.message = response.data.response;
+                });
+                // this.$router.push('/work');
             }
         },
         created: function() {
