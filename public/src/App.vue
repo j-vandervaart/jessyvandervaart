@@ -48,9 +48,15 @@
                 work2: '',
                 about: '',
                 about1: '',
+                about2: '',
                 test: '',
                 navTrigger: true,
-                test2: ''
+                test2: '',
+                skills: '',
+                skills1: '',
+                skills2: '',
+                contact: '',
+                contact1: ''
             }
         },
         created: function() {
@@ -90,7 +96,14 @@
                         this.hamOne.classList.add("hamColor");
                         this.hamTwo.classList.add("hamColor");
                         // console.log(2);
-                    }else if(this.hamburg.classList[0] == null && this.about1 < 50) {
+                    }else if(this.hamburg.classList[0] == null && (this.about1 < 50 && this.about2 > 50)) {
+                        this.hamOne.classList.remove("hamColor");
+                        this.hamTwo.classList.remove("hamColor");
+                    }else if(this.hamburg.classList[0] == null && (this.skills1 < 50 && this.skills2 > 50)) {
+                        this.hamOne.classList.add("hamColor");
+                        this.hamTwo.classList.add("hamColor");
+                    }
+                    else if(this.hamburg.classList[0] == null && this.contact1 < 50) {
                         this.hamOne.classList.remove("hamColor");
                         this.hamTwo.classList.remove("hamColor");
                     }
@@ -125,11 +138,17 @@
                 this.hamTwo = this.$el.querySelector(".hamTwo");
                 this.work = this.$el.querySelector("#Work");
                 this.about = this.$el.querySelector("#About");
+                this.skills = this.$el.querySelector("#Skills");
+                this.contact = this.$el.querySelector("#Contact");
                 if(this.test) {
                     // console.log(2342342);
                     this.work1 = this.work.getBoundingClientRect().top;
                     this.work2 = this.work.getBoundingClientRect().bottom;
                     this.about1 = this.about.getBoundingClientRect().top;
+                    this.about2 = this.about.getBoundingClientRect().bottom;
+                    this.skills1 = this.skills.getBoundingClientRect().top;
+                    this.skills2 = this.skills.getBoundingClientRect().bottom;
+                    this.contact1 = this.contact.getBoundingClientRect().top;
                     if(this.hamburg.classList[0] == "growMenu") {
                         this.hamOne.classList.add("hamColor");
                         this.hamTwo.classList.add("hamColor");
@@ -137,7 +156,13 @@
                     }else if(this.work1 < 50 && this.work2 > 50) {
                         this.hamOne.classList.add("hamColor");
                         this.hamTwo.classList.add("hamColor");
-                    }else if(this.about1 < 50) {
+                    }else if(this.about1 < 50 && this.about2 > 50) {
+                        this.hamOne.classList.remove("hamColor");
+                        this.hamTwo.classList.remove("hamColor");
+                    }else if(this.skills1 < 50 && this.skills2 > 50) {
+                        this.hamOne.classList.add("hamColor");
+                        this.hamTwo.classList.add("hamColor");
+                    }else if(this.contact1 < 50) {
                         this.hamOne.classList.remove("hamColor");
                         this.hamTwo.classList.remove("hamColor");
                     }else {

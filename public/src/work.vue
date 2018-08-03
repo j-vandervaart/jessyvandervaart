@@ -21,9 +21,9 @@
     
     <section id="Work">
         <div id="workContainer">
-            <h1>My Favourite Work</h1>
+            <h1>My Projects</h1>
             <div></div>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            <p>My website development work includes designing and building responsive, front-end website interfaces, as well as creating functional, scalable back-end solutions. I work to continually learn and integrate modern technologies into my projects so that my work can provide clients with highly stylized, performance-driven websites and web applications.</p>
         </div>
         <div id="workListContainer">
             <router-link class="workAnchors" v-for="work in works" v-bind:key="work.id" :to="`/work/${work.proj_id}`">
@@ -41,8 +41,7 @@
             <pre>A Little Bit 
 About Me</pre>
             <div id="aboutPara">
-                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-                <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
+                <p>I am a website designer and developer based in London, Ontario. My passion for web development stems from my overarching passion for being a maker. As a self-professed "maker", I get passionate about creating things, physical or digital, that are both functional and aesthetically appealing. As a web developer, that passion drives me to continually learn and leverage technologies that might make my work more enjoyable, memorable, and performant.</p>
             </div>
             <div id="aboutImages">
                 <img src="/images/shubby_bw.jpg" alt="">
@@ -52,10 +51,10 @@ About Me</pre>
                 <img src="/images/canoe_bw.jpg" alt="Paddling in Northern Ontario" id="img3">
                 <img src="/images/cat_bw.jpg" alt="My Cat" id="img4"> -->
                 <div id="galleryButtons">
-                    <div class="buttonsInact active" @click="changeImg" id="button0"></div>
-                    <div class="buttonsInact" @click="changeImg" id="button1"></div>
-                    <div class="buttonsInact" @click="changeImg" id="button2"></div>
-                    <div class="buttonsInact" @click="changeImg" id="button3"></div>
+                    <div class="buttonsInact active" id="button0"></div>
+                    <div class="buttonsInact" id="button1"></div>
+                    <div class="buttonsInact" id="button2"></div>
+                    <div class="buttonsInact" id="button3"></div>
                 </div>
             </div>
         </div>
@@ -89,14 +88,14 @@ About Me</pre>
             <h2>Tools</h2>
             <div class="skillDivs">
                 <div>
-                    <p>MongoDB</p>
-                    <p>PHP</p>
-                    <p>MySql</p>
+                    <p>Adobe XD</p>
+                    <p>Sketch</p>
+                    <p>Photoshop</p>
                 </div>
                 <div>
-                    <p>JavaScript</p>
-                    <p>Vue JS</p>
-                    <p>Node JS</p>
+                    <p>Illustrator</p>
+                    <p>GitHub</p>
+                    <p>Invision</p>
                 </div>
             </div>
         </div>
@@ -134,16 +133,21 @@ Me</pre>
                 </transition>
                 <label for="name">Name:</label>
                 <input autocomplete="name" type="text" id="name" name="name" v-model="Email.name">
-                <label for="email">Email Address:</label>
-                <input autocomplete="email" type="text" id="email" name="email" v-model="Email.email">
                 <transition name="fade">
                     <p v-if="error.message == 'Please provide a valid email address'">Please provide a valid email address</p>
                 </transition>
+                <label for="email">Email Address:</label>
+                <input autocomplete="email" type="text" id="email" name="email" v-model="Email.email">
                 <label for="message">Message:</label>
                 <textarea name="message" id="message" v-model="Email.message" cols="30" rows="10"></textarea>
                 <input id="submit" type="submit" value="Send">
             </form>
         </div>
+    </section>
+    <section id="footer">
+        <img src="/images/b&wLogo.png" alt="Black and White Logo">
+        <p>Website Made by Jessy Vander Vaart</p>
+        <p>© 2018 All Rights Reserved</p>
     </section>
 </section>
 
@@ -195,7 +199,8 @@ Me</pre>
                 about1: '',
                 about2: '',
                 Email: {name: '', email: '', message: ''},
-                error: {message: ''}
+                error: {message: ''},
+                timerValue: ''
             }
         },
         methods: {
@@ -222,17 +227,18 @@ Me</pre>
                 this.about = this.$el.querySelector("#About");
                 this.about1 = this.about.getBoundingClientRect().top;
                 this.about2 = this.about.getBoundingClientRect().bottom;
-
-                setInterval(this.timer, 4000);
+                this.timerValue = 4000;
+                setInterval(this.timer, this.timerValue);
             },
             timer: function() {
+
                 this.galDivs = this.$el.querySelectorAll(".buttonsInact");
                 this.galImg = this.$el.querySelector("#aboutImages img");
                 this.galH4 = this.$el.querySelector("#aboutImages H4");
                 this.activeOne = this.$el.querySelector(".active");
 
-                this.activeOne.style.width = "23%";
-                this.activeOne.style.marginRight = "0%";
+                // this.activeOne.style.width = "23%";
+                // this.activeOne.style.marginRight = "0%";
                 this.activeOneId = parseInt(this.activeOne.id.slice(6));
 
                 if(this.activeOneId == 3) {
@@ -251,6 +257,7 @@ Me</pre>
                 this.galH4.innerHTML = this.galArr[this.babb][1];
             },
             changeImg: function(e) {
+                clearInterval(this.timer);
                 this.galDivs = this.$el.querySelectorAll(".buttonsInact");
                 this.eVal = e;
                 this.galImg = this.$el.querySelector("#aboutImages img");
@@ -278,21 +285,19 @@ Me</pre>
                 // console.log(newEmail);
 
                 var vm = this;
-                axios.post('/contact', newEmail).then(function(response){
+                axios.post('http://localhost:3000/contact', newEmail).then(function(response){
                     // console.log(response.data.response);
                     vm.error.message = response.data.response;
                 });
                 // this.$router.push('/work');
             }
         },
-        created: function() {
-            window.addEventListener('load', this.galleryTimer);
-        },
         mounted: function() {
             this.nameDesc = this.$el.querySelector("#nameDesc");
             this.grayDivide = this.$el.querySelector("#grayDivide");
             this.missionState = this.$el.querySelector("#missionState");
             this.bottomDivide = this.$el.querySelector("#bottomDivide");
+            setTimeout(this.galleryTimer, 1);
             setTimeout(function(){ 
                 this.nameDesc.style.opacity = "1";
             }, 50);
