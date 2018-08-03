@@ -200,7 +200,7 @@ Me</pre>
                 about2: '',
                 Email: {name: '', email: '', message: ''},
                 error: {message: ''},
-                errorBox: ''
+                timerValue: ''
             }
         },
         methods: {
@@ -286,12 +286,8 @@ Me</pre>
 
                 var vm = this;
                 axios.post('/contact', newEmail).then(function(response){
-                    console.log(response.data.response);
+                    // console.log(response.data.response);
                     vm.error.message = response.data.response;
-                    this.errorBox = this.$el.querySelector("#formDiv p");
-                    if(response.data.response == "Your message has been sent!") {
-                        this.errorBox.style.backgroundColor = "green";
-                    }
                 });
                 // this.$router.push('/work');
             }
