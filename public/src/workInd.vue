@@ -24,7 +24,7 @@
           <p>{{ work.obj_desc }}</p>
         </div>
         <div class="mockupDiv">
-          <img v-if="work.proj_id != 'undefined'" v-bind:src="`/images/${work.proj_id}-mockup.png`" alt="">
+          <img v-if="work.proj_id != 'undefined'" v-bind:src="`/images/${work.proj_id}-mockup.jpg`" alt="">
         </div>
       </div>
       <div class="forwardDiv">

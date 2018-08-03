@@ -285,7 +285,7 @@ Me</pre>
                 // console.log(newEmail);
 
                 var vm = this;
-                axios.post('/contact', newEmail).then(function(response){
+                axios.post('http://localhost:3000/contact', newEmail).then(function(response){
                     // console.log(response.data.response);
                     vm.error.message = response.data.response;
                 });
