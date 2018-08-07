@@ -1335,6 +1335,7 @@ nav {
 	font-weight: 500;
 	font-size: 19px;
 	color: #1c1c1c;
+	line-height: 24px;
 	/*text-transform: uppercase;*/
 	padding-bottom: 10px;
 	border-bottom: 1px solid rgba(0,0,0, .15);
