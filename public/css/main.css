@@ -1512,10 +1512,6 @@ nav {
 	.workContDiv h5 {
 		font-size: 18px;
 	}
-
-	.workContDiv p {
-		font-size: 14px;
-	}
 }
 
 @media screen and (min-width: 1920px) {
