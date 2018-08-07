@@ -240,6 +240,24 @@ nav {
 	width: 100%;
 }
 
+@media screen and (min-width: 768px) {
+	.growMenu {
+		width: 35%;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.growMenu {
+		width: 25%;
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	.navDiv li {
+		font-size: 35px;
+	}
+}
+
 /* Splash Section */
 
 #splashSection {
@@ -520,7 +538,7 @@ nav {
 	text-transform: uppercase;
 	color: white;
 	font-family: 'Raleway Light', sans-serif;
-	padding-top: 8vh;
+	padding-top: 7vh;
 	letter-spacing: 3px;
 	width: 100%;
 	line-height: 20px;
@@ -595,6 +613,11 @@ nav {
 }
 
 @media screen and (min-width: 768px) {
+
+	#workContainer h1 {
+		padding-top: 6vh;
+	}
+
 	#workListContainer {
 		width: 90%;
 		margin-top: 70px;
@@ -724,19 +747,29 @@ nav {
 
 }
 
-@media screen and (min-width: 2000px) {
+@media screen and (min-width: 1920px) {
 	
 	#workContainer h1 {
 		font-size: 36px;
 	}
 
 	#workContainer p {
-		font-size: 25px;
-		line-height: 35px;
+		font-size: 24px;
+		line-height: 40px;
 	}
 
 	#workListContainer {
 		padding-bottom: 100px;
+	}
+
+	.hoverP {
+		font-size: 24px;
+		line-height: 30px;
+	}
+
+	.hoverH2 {
+		font-size: 36px;
+		line-height: 44px;
 	}
 }
 
@@ -755,7 +788,7 @@ nav {
 }
 
 #aboutContainer pre {
-	padding-top: 8vh;
+	padding-top: 7vh;
 	font-family: 'Wagner Condensed', sans-serif;
 	font-size: 40px;
 	width: 100%;
@@ -811,7 +844,7 @@ nav {
     height: 5px;
     background-color: rgb(112,112,112);
     opacity: .2;
-    transition: all 4s linear;
+    transition: all 4.5s linear;
 }
 
 .active {
@@ -822,6 +855,11 @@ nav {
 }
 
 @media screen and (min-width: 768px) {
+
+	#aboutContainer pre {
+		padding-top: 6vh;
+	}
+
 	#aboutPara {
 		width: 38%;
 	}
@@ -833,6 +871,11 @@ nav {
 }
 
 @media screen and (min-width: 1025px) {
+
+	#aboutContainer pre {
+		padding-top: 8vh;
+	}
+
 	#aboutContainer {
 		width: 70%;
 		padding-bottom: 100px;
@@ -862,6 +905,35 @@ nav {
 		opacity: 1;
 		transition: opacity .5s ease;
 	}*/
+}
+
+@media screen and (min-width: 1920px) {
+	
+	#aboutPara p {
+		font-size: 20px;
+		line-height: 36px;
+	}
+
+	#aboutImages h4 {
+		font-size: 16px;
+	}
+
+	#aboutContainer pre {
+		font-size: 50px;
+		line-height: 60px;
+	}
+}
+
+@media screen and (min-width: 2400px) {
+
+	#aboutPara p {
+		font-size: 24px;
+		line-height: 40px;
+	}
+
+	#aboutImages h4 {
+		font-size: 20px;
+	}
 }
 
 /* Skills */
@@ -948,6 +1020,7 @@ nav {
 	font-family: 'Open Sans Light', sans-serif;
 	margin-top: 20px;
 	font-size: 14px;
+	line-height: 20px;
 }
 
 .eduDivs div {
@@ -981,6 +1054,44 @@ nav {
 	}
 }
 
+@media screen and (min-width: 1920px) {
+	
+	#Skills h1 {
+		font-size: 32px;
+	}
+
+	#Skills h2 {
+		font-size: 28px;
+	}
+
+	#Skills h3 {
+		font-size: 28px;
+	}
+
+	#Skills p {
+		font-size: 18px;
+	}
+}
+
+@media screen and (min-width: 2400px) {
+	
+	#Skills h1 {
+		font-size: 36px;
+	}
+
+	#Skills h2 {
+		font-size: 30px;
+	}
+
+	#Skills h3 {
+		font-size: 26px;
+	}
+
+	#Skills p {
+		font-size: 22px;
+	}
+}
+
 /* About */
 
 #Contact {
@@ -990,7 +1101,7 @@ nav {
 	box-sizing: border-box;
 	width: 90%;
 	margin: 0 auto;
-	padding-top: 6vh;
+	padding-top: 7vh;
 }
 
 #Contact pre {
@@ -1077,10 +1188,17 @@ nav {
 	color: #fff;
 }
 
+@media screen and (min-width: 768px) {
+	#Contact {
+		padding-top: 6vh;
+	}
+}
+
 @media screen and (min-width: 1025px) {
 
 	#Contact {
 		width: 70%;
+		padding-top: 8vh;
 	}
 
 	#contactBlurb {
@@ -1090,6 +1208,42 @@ nav {
 	#formDiv {
 		width: 55%;
 		margin-top: 25px;
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	
+	#Contact pre {
+		font-size: 50px;
+		line-height: 60px;
+	}
+
+	#contactBlurb p {
+		font-size: 20px;
+		line-height: 36px;
+	}
+
+	#formDiv label {
+		font-size: 16px;
+		margin-bottom: 24px;
+	}
+}
+
+@media screen and (min-width: 2400px) {
+	
+	#Contact pre {
+		font-size: 50px;
+		line-height: 60px;
+	}
+
+	#contactBlurb p {
+		font-size: 24px;
+		line-height: 40px;
+	}
+
+	#formDiv label {
+		font-size: 20px;
+		margin-bottom: 24px;
 	}
 }
 
@@ -1167,6 +1321,7 @@ nav {
 	padding-top: 20px;
 	font-size: 25px;
 	color: #1c1c1c;
+	line-height: 30px;
 }
 
 .workContDiv {
@@ -1176,16 +1331,19 @@ nav {
 }
 
 .workContDiv h3 {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Open Sans Light', sans-serif;
 	font-weight: 500;
 	font-size: 18px;
 	color: #1c1c1c;
+	/*text-transform: uppercase;*/
+	padding-bottom: 10px;
+	border-bottom: 1px solid rgba(0,0,0, .1);
 }
 
 .workContDiv p {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 15px;
-	padding-top: 8px;
+	font-size: 14px;
+	padding-top: 12px;
 	padding-bottom: 10px;
 	font-weight: 350;
 	line-height: 25px;
@@ -1193,15 +1351,14 @@ nav {
 }
 
 .workContDiv h5 {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Open Sans Light', sans-serif;
 	font-weight: 500;
 	font-size: 18px;
 	color: #1c1c1c;
 	padding-top: 15px;
-}
-
-#techPs {
-	font-size: 14px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid rgba(0,0,0, .08);
+	/*text-transform: uppercase;*/
 }
 
 .mockupDiv {
@@ -1251,6 +1408,26 @@ nav {
 	
 	.workHeaderImg {
 		height: 300px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	
+	.workContDiv h3 {
+		font-size: 22px;
+	}
+
+	.workContDiv h5 {
+		font-size: 22px;
+	}
+
+	.workContDiv p {
+		font-size: 16px;
+	}
+
+	.workTitleDiv h2 {
+		font-size: 30px;
+		padding-top: 35px;
 	}
 }
 
@@ -1328,4 +1505,66 @@ nav {
 		font-size: 30px;
 	}
 
+	.workContDiv h3 {
+		font-size: 18px;
+	}
+
+	.workContDiv h5 {
+		font-size: 18px;
+	}
+
+	.workContDiv p {
+		font-size: 14px;
+	}
 }
+
+@media screen and (min-width: 1920px) {
+	
+	.workTitleDiv h2 {
+		font-size: 56px;
+		padding-top: 50px;
+	}
+
+	.workContDiv h3 {
+		font-size: 26px;
+	}
+
+	.workContDiv h5 {
+		font-size: 28px;
+	}
+
+	.workContDiv p {
+		font-size: 20px;
+		line-height: 36px;
+	}
+
+	.forwardDiv a {
+		font-size: 20px;
+	}
+}
+
+@media screen and (min-width: 2400px) {
+	
+	.workTitleDiv h2 {
+		font-size: 56px;
+		padding-top: 50px;
+	}
+
+	.workContDiv h3 {
+		font-size: 28px;
+	}
+
+	.workContDiv h5 {
+		font-size: 28px;
+	}
+
+	.workContDiv p {
+		font-size: 24px;
+		line-height: 40px;
+	}
+
+	.forwardDiv a {
+		font-size: 24px;
+	}
+}
+

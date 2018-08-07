@@ -188,11 +188,11 @@ Me</pre>
                     ],
                     [
                         '/images/canoe_bw.jpg',
-                        'Paddling at Cypress Lake'
+                        'Backcountry camping in Algonquin Provincial Park'
                     ],
                     [
                         '/images/brandon.jpg',
-                        'Hawaiian shirts with friends'
+                        'Friends and Hawaiian shirts!'
                     ]
                 ],
                 about: '',
@@ -227,7 +227,7 @@ Me</pre>
                 this.about = this.$el.querySelector("#About");
                 this.about1 = this.about.getBoundingClientRect().top;
                 this.about2 = this.about.getBoundingClientRect().bottom;
-                this.timerValue = 4000;
+                this.timerValue = 4500;
                 setInterval(this.timer, this.timerValue);
             },
             timer: function() {
@@ -310,10 +310,10 @@ Me</pre>
             }, 800);
             setTimeout(function(){ 
                 this.missionState.style.opacity = "1";
-            }, 3000);
+            }, 2500);
             setTimeout(function(){ 
                 this.missionState.style.right = "0";
-            }, 3000);
+            }, 2500);
             setTimeout(function(){ 
                 this.bottomDivide.style.width = "100%";
             }, 1500);
