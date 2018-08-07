@@ -676,7 +676,7 @@ nav {
 	}
 
 	.hoverP {
-		font-size: 13px;
+		font-size: 14px;
 		line-height: 20px;
 	}
 }
@@ -738,7 +738,7 @@ nav {
 	.hoverP {
 		opacity: 0;
 		transition: opacity .7s ease;
-		font-size: 15px;
+		font-size: 16px;
 	}
 
 	.hoverTitleToggle {
@@ -1341,7 +1341,7 @@ nav {
 }
 
 .workContDiv p {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Open Sans Light', sans-serif;
 	font-size: 16px;
 	padding-top: 12px;
 	padding-bottom: 10px;
