@@ -608,7 +608,7 @@ nav {
 .hoverP {
 	font-family: 'Raleway Light', sans-serif;
 	color: white;
-	font-size: 15px;
+	font-size: 16px;
 	line-height: 24px;
 }
 
@@ -818,6 +818,7 @@ nav {
 	display: block;
 	width: 100%;
 	margin: 0 auto;
+	opacity: .9;
 }
 
 #aboutImages h4 {
@@ -1331,7 +1332,7 @@ nav {
 }
 
 .workContDiv h3 {
-	font-family: 'Open Sans Light', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-weight: 500;
 	font-size: 19px;
 	color: #1c1c1c;
@@ -1343,7 +1344,7 @@ nav {
 
 .workContDiv p {
 	font-family: 'Open Sans Light', sans-serif;
-	font-size: 15px;
+	font-size: 16px;
 	padding-top: 12px;
 	padding-bottom: 10px;
 	font-weight: 350;
@@ -1352,7 +1353,7 @@ nav {
 }
 
 .workContDiv h5 {
-	font-family: 'Open Sans Light', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-weight: 500;
 	font-size: 19px;
 	color: #1c1c1c;

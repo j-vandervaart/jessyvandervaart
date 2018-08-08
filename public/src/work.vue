@@ -41,7 +41,7 @@
             <pre>A Little Bit 
 About Me</pre>
             <div id="aboutPara">
-                <p>I am a website designer and developer based in London, Ontario. My passion for web development stems from my overarching passion for being a maker. As a self-professed "maker", I get passionate about creating things, physical or digital, that are both functional and aesthetically appealing. As a web developer, that passion drives me to continually learn and leverage technologies that might make my work more enjoyable, memorable, and performant.</p>
+                <p>I am a website designer and developer based in London, Ontario. My passion for web development stems from my overarching passion for being a maker. As a self-professed "maker", I am passionate about creating things, physical or digital, that are both functional and aesthetically appealing. As a web developer, that passion drives me to continually learn and leverage technologies that might make my work more enjoyable, memorable, and performant.</p>
             </div>
             <div id="aboutImages">
                 <img src="/images/shubby_bw.jpg" alt="">
@@ -188,7 +188,7 @@ Me</pre>
                     ],
                     [
                         '/images/canoe_bw.jpg',
-                        'Backcountry camping in Algonquin Provincial Park'
+                        'Doing some paddling in Algonquin Provincial Park'
                     ],
                     [
                         '/images/brandon.jpg',
