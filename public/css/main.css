@@ -844,7 +844,7 @@ nav {
     height: 5px;
     background-color: rgb(112,112,112);
     opacity: .2;
-    transition: all 4.5s linear;
+    transition: all 5.5s linear;
 }
 
 .active {

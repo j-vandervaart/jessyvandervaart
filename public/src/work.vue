@@ -223,7 +223,7 @@ Me</pre>
                 this.about = this.$el.querySelector("#About");
                 this.about1 = this.about.getBoundingClientRect().top;
                 this.about2 = this.about.getBoundingClientRect().bottom;
-                this.timerValue = 4500;
+                this.timerValue = 5500;
                 setInterval(this.timer, this.timerValue);
             },
             timer: function() {
