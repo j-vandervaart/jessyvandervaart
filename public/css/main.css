@@ -840,7 +840,7 @@ nav {
 
 .buttonsInact {
 	width: 2%;
-	margin-right: 23%;
+	margin-right: 31.3%;
     height: 5px;
     background-color: rgb(112,112,112);
     opacity: .2;
@@ -850,7 +850,7 @@ nav {
 .active {
 	opacity: 1;
 	box-sizing: border-box;
-	width: 25%;
+	width: 33.3%;
 	margin-right: 0%;
 }
 

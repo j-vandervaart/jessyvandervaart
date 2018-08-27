@@ -54,7 +54,7 @@ About Me</pre>
                     <div class="buttonsInact active" id="button0"></div>
                     <div class="buttonsInact" id="button1"></div>
                     <div class="buttonsInact" id="button2"></div>
-                    <div class="buttonsInact" id="button3"></div>
+                    <!-- <div class="buttonsInact" id="button3"></div> -->
                 </div>
             </div>
         </div>
@@ -188,11 +188,7 @@ Me</pre>
                     ],
                     [
                         '/images/canoe_bw.jpg',
-                        'Doing some paddling in Algonquin Provincial Park'
-                    ],
-                    [
-                        '/images/brandon.jpg',
-                        'Friends and Hawaiian shirts!'
+                        'Paddling in Algonquin Provincial Park!'
                     ]
                 ],
                 about: '',
@@ -241,7 +237,7 @@ Me</pre>
                 // this.activeOne.style.marginRight = "0%";
                 this.activeOneId = parseInt(this.activeOne.id.slice(6));
 
-                if(this.activeOneId == 3) {
+                if(this.activeOneId == 2) {
                         this.activeOneId = -1;
                 }
                 this.babb = this.activeOneId+1;
