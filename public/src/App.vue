@@ -126,14 +126,6 @@
                 this.hamTwo.classList.remove("hamTwoChange");
                 this.navDiv.classList.remove("navDivChange");
 
-                this.work = this.$el.querySelector("#Work");
-                this.work1 = this.work.getBoundingClientRect().top;
-
-                if(this.work1 > 50) {
-                    this.hamOne.classList.add("hamColor");
-                    this.hamTwo.classList.add("hamColor");
-                }
-
                 if(this.test) {
                     this.scrollToElement = "#"+e.target.innerHTML;
                     TweenLite.to(window, 1.5, {scrollTo: this.scrollToElement, ease:Power2.easeOut});
