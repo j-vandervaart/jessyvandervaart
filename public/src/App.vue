@@ -126,8 +126,6 @@
                 this.hamTwo.classList.remove("hamTwoChange");
                 this.navDiv.classList.remove("navDivChange");
 
-                console.log(this.work2);
-
                 if((this.work1 <= 0 && this.work2 >= 50) || (this.skills1 <= 0 && this.skills2 >= 50)) {
                     this.hamOne.classList.add("hamColor");
                     this.hamTwo.classList.add("hamColor");
