@@ -1,776 +1,850 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 @font-face {
-    font-family: 'Wagner Condensed';
-    src: url('/fonts/wagner_zip-change_condensed-webfont.woff2') format('woff2'),
-         url('/fonts/wagner_zip-change_condensed-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Wagner Condensed";
+  src: url("/fonts/wagner_zip-change_condensed-webfont.woff2") format("woff2"),
+    url("/fonts/wagner_zip-change_condensed-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Raleway';
-    src: url('/fonts/raleway-black-webfont.woff2') format('woff2'),
-         url('/fonts/raleway-black-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Raleway";
+  src: url("/fonts/raleway-black-webfont.woff2") format("woff2"),
+    url("/fonts/raleway-black-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Raleway Light';
-    src: url('/fonts/raleway-light-webfont.woff2') format('woff2'),
-         url('/fonts/raleway-light-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Raleway Light";
+  src: url("/fonts/raleway-light-webfont.woff2") format("woff2"),
+    url("/fonts/raleway-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Raleway Medium';
-    src: url('/fonts/raleway-medium-webfont.woff2') format('woff2'),
-         url('/fonts/raleway-medium-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Raleway Medium";
+  src: url("/fonts/raleway-medium-webfont.woff2") format("woff2"),
+    url("/fonts/raleway-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Open Sans Light';
-    src: url('/fonts/opensans-light-webfont.woff2') format('woff2'),
-         url('/fonts/opensans-light-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Open Sans Light";
+  src: url("/fonts/opensans-light-webfont.woff2") format("woff2"),
+    url("/fonts/opensans-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Open Sans';
-    src: url('/fonts/opensans-regular-webfont.woff2') format('woff2'),
-         url('/fonts/opensans-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Open Sans";
+  src: url("/fonts/opensans-regular-webfont.woff2") format("woff2"),
+    url("/fonts/opensans-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* Header */
 
 header {
-	height: 10vh;
-	min-height: 72px;
+  height: 10vh;
+  min-height: 72px;
 }
 
 #blackBar {
-	background-color: #1c1c1c;
-	height: 25px;
-	/*position: relative;*/
-	/*z-index: 2;*/
+  background-color: #1c1c1c;
+  height: 25px;
+  /*position: relative;*/
+  /*z-index: 2;*/
 }
 
 #headerImgDiv {
-	display: flex;
-	justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 #bwLogo {
-	height: 55px;
-	
+  height: 55px;
 }
 
 #homeRouter {
-	display: block;
-	position: relative;
-	top: -8px;
-	margin-left: 5%;
+  display: block;
+  position: relative;
+  top: -8px;
+  margin-left: 5%;
 }
 
 #hamburger {
-	width: 35px;
-	/*margin-right: 5%;*/
-	margin-top: 15px;
-	position: fixed;
-	right: 5%;
-	z-index: 2;
+  width: 35px;
+  /*margin-right: 5%;*/
+  margin-top: 15px;
+  position: fixed;
+  right: 5%;
+  z-index: 2;
 }
 
 .hamClass {
-	background-color: #1c1c1c;
-	height: 4px;
-	margin-bottom: 5px;
-	border-radius: 10px;
-	transition: all .4s ease;
+  background-color: #1c1c1c;
+  height: 4px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  transition: all 0.4s ease;
 }
 
 .hamColor {
-	background-color: white;
+  background-color: white;
 }
 
 .hamOne {
-	width: 35px;
+  width: 35px;
 }
 
 .hamTwo {
-	width: 18px;
-	float: right;
+  width: 18px;
+  float: right;
 }
 
 .hamOneChange {
-	transform: rotate(45deg);
-	transition: all .5s ease;
+  transform: rotate(45deg);
+  transition: all 0.5s ease;
 }
 
 .hamTwoChange {
-	transform: rotate(-45deg);
-	width: 35px;
-	position: relative;
-	top: -8px;
-	transition: all .5s ease;
+  transform: rotate(-45deg);
+  width: 35px;
+  position: relative;
+  top: -8px;
+  transition: all 0.5s ease;
 }
 
 @media screen and (min-width: 1025px) {
+  #homeRouter {
+    margin-left: 15%;
+  }
 
-	#homeRouter {
-		margin-left: 15%;
-	}
-
-	#hamburger {
-		right: 15%;
-	}
+  #hamburger {
+    right: 15%;
+  }
 }
 
 @media screen and (min-width: 1920px) {
-	#bwLogo {
-		height: 75px;
-	}
+  #bwLogo {
+    height: 75px;
+  }
 }
 
 @media screen and (min-width: 2200px) {
-	#bwLogo {
-		height: 90px;
-	}
+  #bwLogo {
+    height: 90px;
+  }
 }
 
 /* Nav Bar */
 
 nav {
-	height: 100vh;
-	width: 0;
-	position: fixed;
-	top: 0;
-	right:0;
-	background-color: #1c1c1c;
-	z-index: 1;
-	transition: width 1s ease;
-	display: flex;
-	justify-content: center;
-	overflow: hidden;
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #1c1c1c;
+  z-index: 1;
+  transition: width 1s ease;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .navDiv {
-	width: 70%;
-	align-self: center;
-	opacity: 0;
-	transition: all .4s ease;
+  width: 70%;
+  align-self: center;
+  opacity: 0;
+  transition: all 0.4s ease;
 }
 
 .navDivChange {
-	opacity: 1;
+  opacity: 1;
 }
 
 .navDiv li {
-	font-family: 'Raleway Light', sans-serif;
-	text-transform: uppercase;
-	font-size: 25px;
-	color: white;
-	margin-bottom: 6vh;
-	padding-bottom: 20px;
-	text-align: right;
-	border-bottom: 1px rgba(255,255,255, .2) solid;
-	transition: all .4s ease;
-	cursor: pointer;
+  font-family: "Raleway Light", sans-serif;
+  text-transform: uppercase;
+  font-size: 25px;
+  color: white;
+  margin-bottom: 6vh;
+  padding-bottom: 20px;
+  text-align: right;
+  border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
+  transition: all 0.4s ease;
+  cursor: pointer;
 }
 
 .navDiv ul li:hover {
-	font-size: 27px;
-	color: #707070;
+  font-size: 27px;
+  color: #707070;
 }
 
 #homeNavButton {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 .growMenu {
-	width: 100%;
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) {
-	.growMenu {
-		width: 35%;
-	}
+  .growMenu {
+    width: 35%;
+  }
 }
 
 @media screen and (min-width: 1024px) {
-	.growMenu {
-		width: 25%;
-	}
+  .growMenu {
+    width: 25%;
+  }
 }
 
 @media screen and (min-width: 1920px) {
-	.navDiv li {
-		font-size: 35px;
-	}
+  .navDiv li {
+    font-size: 35px;
+  }
 }
 
 /* Splash Section */
 
 #splashSection {
-	height: 90vh;
-	min-height: 350px;
-	width: 90%;
-	margin: 0 auto;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+  height: 90vh;
+  min-height: 350px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 #nameDesc {
-	width: 100%;
-	opacity: 0;
-	transition: opacity 1s ease;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1s ease;
 }
 
 #nameDesc h1 {
-	font-family: 'Raleway Light', sans-serif;
-	text-transform: uppercase;
-	padding-top: 10vh;
-	font-size: 18px;
-	margin-bottom: 10px;
+  font-family: "Raleway Light", sans-serif;
+  text-transform: uppercase;
+  padding-top: 10vh;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
 #nameDesc h2 {
-	font-family: 'Raleway Light', sans-serif;
-	margin-top: 4vh;
-	margin-bottom: 10px;
+  font-family: "Raleway Light", sans-serif;
+  margin-top: 4vh;
+  margin-bottom: 10px;
 }
 
 #grayDivide {
-	width: 0;
-	height: 1px;
-	background-color: #707070;
-	opacity: .5;
-	margin-top: 4vh;
-	margin-bottom: 10px;
-	z-index: 0;
-	transition: width 2s ease;
+  width: 0;
+  height: 1px;
+  background-color: #707070;
+  opacity: 0.5;
+  margin-top: 4vh;
+  margin-bottom: 10px;
+  z-index: 0;
+  transition: width 2s ease;
 }
 
 #bottomDivide {
-	display: none;
-	width: 0;
-	height: 1px;
-	background-color: #707070;
-	opacity: .5;
-	margin-bottom: 8vh;
-	z-index: 0;
-	transition: width 1.5s ease;
+  display: none;
+  width: 0;
+  height: 1px;
+  background-color: #707070;
+  opacity: 0.5;
+  margin-bottom: 8vh;
+  z-index: 0;
+  transition: width 1.5s ease;
 }
 
 #missionState {
-	width: 70%;
-	position: relative;
-	right: -50px;
-	opacity: 0;
-	transition: right 1.5s ease, opacity 1s ease;
+  width: 70%;
+  position: relative;
+  right: -50px;
+  opacity: 0;
+  transition: right 1.5s ease, opacity 1s ease;
 }
 
 #missionState p {
-	font-family: 'Wagner Condensed', sans-serif;
-	font-size: 34px;
-	/*width: 70%;*/
-	line-height: 45px;
-	margin-top: 4vh;
+  font-family: "Wagner Condensed", sans-serif;
+  font-size: 34px;
+  /*width: 70%;*/
+  line-height: 45px;
+  margin-top: 4vh;
 }
 
 #seeMore {
-	padding-bottom: 25px;
-	margin: 0 auto;
-	cursor: pointer;
-	position: relative;
-	bottom: 0;
-	transition: bottom .3s ease;
+  padding-bottom: 25px;
+  margin: 0 auto;
+  cursor: pointer;
+  position: relative;
+  bottom: 0;
+  transition: bottom 0.3s ease;
 }
 
 #seeMore:hover {
-	bottom: 10px;
-	transition: bottom .3s ease;
+  bottom: 10px;
+  transition: bottom 0.3s ease;
 }
 
 #seeMore p {
-	font-family: 'Raleway Light', sans-serif;
-	font-size: 13px;
-	text-transform: uppercase;
-	color: #1c1c1c;
-	opacity: .5;
-	padding-bottom: 5px;
+  font-family: "Raleway Light", sans-serif;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #1c1c1c;
+  opacity: 0.5;
+  padding-bottom: 5px;
 }
 
 #seeMore img {
-	width: 13px;
-	display: block;
-	margin: 0 auto;
-
+  width: 13px;
+  display: block;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 320px) {
-	#missionState p {
-		font-size: 26px;
-	}
+  #missionState p {
+    font-size: 26px;
+  }
 }
 
 @media screen and (min-width: 768px) {
-	
-	#splashSection {
-		min-height: 650px;
-	}
+  #splashSection {
+    min-height: 650px;
+  }
 
-	#splashWords {
-		margin-top: 5vh;
-	}
+  #splashWords {
+    margin-top: 5vh;
+  }
 
-	#missionState {
-		width: 400px;
-	}
+  #missionState {
+    width: 400px;
+  }
 
-	#nameDesc h1, h2 {
-		font-size: 24px;
-	}
+  #nameDesc h1,
+  h2 {
+    font-size: 24px;
+  }
 
-	#missionState p {
-		font-size: 50px;
-		line-height: 60px;
-	}
+  #missionState p {
+    font-size: 50px;
+    line-height: 60px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
+  #missionState {
+    width: 50vh;
+  }
 
-	#missionState {
-		width: 50vh;
-	}
+  #nameDesc h1,
+  h2 {
+    font-size: 30px;
+  }
 
-	#nameDesc h1, h2 {
-		font-size: 30px;
-	}
+  #missionState p {
+    font-size: 70px;
+    line-height: 80px;
+  }
 
-	#missionState p {
-		font-size: 70px;
-		line-height: 80px;
-	}
-
-	#seeMore p {
-		font-size: 25px;
-	}
+  #seeMore p {
+    font-size: 25px;
+  }
 }
 
 @media screen and (min-width: 1025px) {
+  #splashSection {
+    width: 70%;
+    min-height: 600px;
+  }
 
-	#splashSection {
-		width: 70%;
-		min-height: 600px;
-	}
-	
-	#splashWords {
-		display: flex;
-		margin-top: 18vh;
-	}
+  #splashWords {
+    display: flex;
+    margin-top: 18vh;
+  }
 
-	#nameDesc {
-		width: auto;
-		margin-right: 70px;
-	}
+  #nameDesc {
+    width: auto;
+    margin-right: 70px;
+  }
 
-	#nameDesc h1 {
-		padding-top: 16px;
-		font-size: 20px;
-	}
+  #nameDesc h1 {
+    padding-top: 16px;
+    font-size: 20px;
+  }
 
-	#nameDesc h2 {
-		font-size: 16px;
-		line-height: 30px;
-	}
+  #nameDesc h2 {
+    font-size: 16px;
+    line-height: 30px;
+  }
 
-	#grayDivide {
-		width: 1px;
-		height: 45vh;
-		max-height: 0;
-		margin: 0;
-		transition: max-height 2s ease;
-	}
+  #grayDivide {
+    width: 1px;
+    height: 45vh;
+    max-height: 0;
+    margin: 0;
+    transition: max-height 2s ease;
+  }
 
-	#bottomDivide {
-		display: block;
-	}
+  #bottomDivide {
+    display: block;
+  }
 
-	#missionState {
-		margin-left: 70px;
-		width: 400px;
-	}
+  #missionState {
+    margin-left: 70px;
+    width: 400px;
+  }
 
-	#missionState p {
-		font-size: 50px;
-		width: 100%;
-		line-height: 60px;
-		margin-top: 2px;
-	}
+  #missionState p {
+    font-size: 50px;
+    width: 100%;
+    line-height: 60px;
+    margin-top: 2px;
+  }
 
-	#seeMore p {
-		font-size: 13px;
-	}
+  #seeMore p {
+    font-size: 13px;
+  }
 }
 
 @media screen and (min-width: 1920px) {
-	#nameDesc {
-		margin-right: 120px;
-	}
+  #nameDesc {
+    margin-right: 120px;
+  }
 
-	#nameDesc h1{
-		font-size: 35px;
-	}
+  #nameDesc h1 {
+    font-size: 35px;
+  }
 
-	#nameDesc h2 {
-		font-size: 25px;
-	}
+  #nameDesc h2 {
+    font-size: 25px;
+  }
 
-	#missionState {
-		margin-left: 120px;
-	}
+  #missionState {
+    margin-left: 120px;
+  }
 
-	#missionState p {
-		font-size: 60px;
-		line-height: 75px;
-	}
+  #missionState p {
+    font-size: 60px;
+    line-height: 75px;
+  }
 
-	#seeMore p {
-		font-size: 20px;
-	}
+  #seeMore p {
+    font-size: 20px;
+  }
 }
 
 @media screen and (min-width: 2200px) {
-	#nameDesc {
-		margin-right: 160px;
-	}
+  #nameDesc {
+    margin-right: 160px;
+  }
 
-	#nameDesc h1{
-		font-size: 45px;
-	}
+  #nameDesc h1 {
+    font-size: 45px;
+  }
 
-	#nameDesc h2 {
-		font-size: 35px;
-	}
+  #nameDesc h2 {
+    font-size: 35px;
+  }
 
-	#missionState {
-		margin-left: 160px;
-		width: 500px;
-	}
+  #missionState {
+    margin-left: 160px;
+    width: 500px;
+  }
 
-	#missionState p {
-		font-size: 75px;
-		line-height: 85px;
-	}
+  #missionState p {
+    font-size: 75px;
+    line-height: 85px;
+  }
 
-	#seeMore p {
-		font-size: 30px;
-	}
+  #seeMore p {
+    font-size: 30px;
+  }
 }
 
 /* Work Section */
 
 #Work {
-	background-color: #1c1c1c; 
+  background-color: #1c1c1c;
 }
 
 #workContainer {
-	width: 90%;
-	margin: 0 auto;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 #workContainer h1 {
-	font-size: 24px;
-	text-transform: uppercase;
-	color: white;
-	font-family: 'Raleway Light', sans-serif;
-	padding-top: 7vh;
-	letter-spacing: 3px;
-	width: 100%;
-	line-height: 20px;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: white;
+  font-family: "Raleway Light", sans-serif;
+  padding-top: 7vh;
+  letter-spacing: 3px;
+  width: 100%;
+  line-height: 20px;
 }
 
 #workContainer p {
-	color: white;
-	font-family: 'Open Sans Light', sans-serif;
-	margin-top: 4vh;
-	line-height: 26px;
-	font-size: 16px;
-	/*letter-spacing: 1px;*/
-	word-spacing: .2em;
-	width: 100%;
+  color: white;
+  font-family: "Open Sans Light", sans-serif;
+  margin-top: 4vh;
+  line-height: 26px;
+  font-size: 16px;
+  /*letter-spacing: 1px;*/
+  word-spacing: 0.2em;
+  width: 100%;
 }
 
 #workContainer div {
-	display: none;
-	height: 1px;
-	background-color: #707070;
-	width: 68%;
+  display: none;
+  height: 1px;
+  background-color: #707070;
+  width: 68%;
 }
 
 #workListContainer {
-	width: 90%;
-	padding-top: 50px;
-	margin: 0 auto;
-	position: relative;
-	padding-bottom: 100px;
+  width: 90%;
+  padding-top: 50px;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 100px;
 }
 
 .workAnchors {
-	display: block;
-	width: 90vw;
-	text-decoration: none;
-	/*height: 100vw;*/
+  display: block;
+  width: 90vw;
+  text-decoration: none;
+  /*height: 100vw;*/
 }
 
 .workSquares {
-	height: 90vw;
-	background-size: cover;
-	background-position: center;
+  height: 90vw;
+  background-size: cover;
+  background-position: center;
 }
 
 .hoverTitle {
-	height: 100%;
-	width: 100%;
-	background-color: rgba(0,0,0,0.6);
-	transition: background-color .7s ease;
-	display: flex;
-	flex-wrap: wrap;
-	align-content: center;
-	box-sizing: border-box;
-	padding: 10%;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: background-color 0.7s ease;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  box-sizing: border-box;
+  padding: 10%;
 }
 
 .hoverH2 {
-	font-family: 'Raleway Medium', sans-serif;
-	text-transform: uppercase;
-	color: white;
-	font-size: 22px;
-	text-align: left;
-	line-height: 28px;
-	margin-bottom: 30px;
+  font-family: "Raleway Medium", sans-serif;
+  text-transform: uppercase;
+  color: white;
+  font-size: 22px;
+  text-align: left;
+  line-height: 28px;
+  margin-bottom: 30px;
 }
 
 .hoverP {
-	font-family: 'Raleway Light', sans-serif;
-	color: white;
-	font-size: 16px;
-	line-height: 24px;
+  font-family: "Raleway Light", sans-serif;
+  color: white;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 @media screen and (min-width: 768px) {
+  #workContainer h1 {
+    padding-top: 6vh;
+  }
 
-	#workContainer h1 {
-		padding-top: 6vh;
-	}
+  #workListContainer {
+    width: 90%;
+    margin-top: 70px;
+    padding-top: 0;
+  }
 
-	#workListContainer {
-		width: 90%;
-		margin-top: 70px;
-		padding-top: 0;
-	}
+  .workAnchors {
+    width: 31%;
+  }
 
-	.workAnchors {
-		width: 31%;
-	}
+  .workSquares {
+  }
 
-	.workSquares {
-	}
+  #fx-coating {
+    height: 40vw;
+  }
 
-	#pionear-promotional-site {
-		height: 40vw;
-	}
+  #scifi-tv {
+    height: 19vw;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0;
+    width: 31%;
+  }
 
-	#scifi-tv {
-		height: 19vw;
-		position: absolute;
-		right: 0;
-		left: 0;
-		margin-left: auto;
-		margin-right: auto;
-		top: 0;
-		width: 31%;
-	}
+  #scifi-tv:hover {
+    background-image: url("./images/scifi-tv-c.jpg");
+  }
 
-	#scifi-tv:hover {
-		background-image: url('./images/scifi-tv-c.jpg');
-	}
+  #campers-guide {
+    height: 19vw;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 21vw;
+    width: 31%;
+  }
 
-	#campers-guide {
-		height: 19vw;
-		position: absolute;
-		right: 0;
-		left: 0;
-		margin-left: auto;
-		margin-right: auto;
-		top: 21vw;
-		width: 31%;
-	}
+  #pionear {
+    height: 40vw;
+    position: absolute;
+    right: 0;
+    width: 31%;
+    top: 0;
+  }
 
-	#pionear {
-		height: 40vw;
-		position: absolute;
-		right: 0;
-		width: 31%;
-		top: 0;
-	}
+  .hoverH2 {
+    font-family: "Raleway Medium", sans-serif;
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
 
-	.hoverH2 {
-		font-family: 'Raleway Medium', sans-serif;
-		font-size: 16px;
-		margin-bottom: 15px;
-	}
-
-	.hoverP {
-		font-size: 14px;
-		line-height: 20px;
-	}
+  .hoverP {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 
 @media screen and (min-width: 1025px) {
-	#workContainer {
-		width: 70%;
-	}
+  #workContainer {
+    width: 70%;
+  }
 
-	#workContainer h1 {
-		padding-top: 8vh;
-		width: 30%;
-	} 
+  #workContainer h1 {
+    padding-top: 8vh;
+    width: 30%;
+  }
 
-	#workContainer div {
-		display: block;
-		margin-top: 10.5vh;
-	}
+  #workContainer div {
+    display: block;
+    margin-top: 10.5vh;
+  }
 
-	#workListContainer {
-		padding-bottom: 50px;
-		margin-top: 40px;
-		width: 70%;
-	}
+  #workListContainer {
+    padding-bottom: 50px;
+    margin-top: 40px;
+    width: 70%;
+  }
 
-	#pionear-promotional-site {
-		height: 30vw;
-	}
+  #fx-coating {
+    height: 30vw;
+  }
 
-	#scifi-tv {
-	    height: 14vw;
-	}
+  #scifi-tv {
+    height: 14vw;
+  }
 
-	#campers-guide {
-		height: 14vw;
-		top: 16vw;
-	}
+  #campers-guide {
+    height: 14vw;
+    top: 16vw;
+  }
 
-	#pionear {
-		height: 30vw;
-	}
+  #pionear {
+    height: 30vw;
+  }
 
-	.hoverTitle {
-		background-color: rgba(0,0,0,0);
-		transition: background-color .4s ease;
-	}
+  .hoverTitle {
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.4s ease;
+  }
 
-	.hoverTitle:hover {
-		background-color: rgba(0,0,0,0.5);
-	}
+  .hoverTitle:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 
-	.hoverH2 {
-		opacity: 0;
-		transition: opacity .7s ease;
-		font-size: 22px;
-		line-height: 30px;
-	}
+  .hoverH2 {
+    opacity: 0;
+    transition: opacity 0.7s ease;
+    font-size: 22px;
+    line-height: 30px;
+  }
 
-	.hoverP {
-		opacity: 0;
-		transition: opacity .7s ease;
-		font-size: 16px;
-	}
+  .hoverP {
+    opacity: 0;
+    transition: opacity 0.7s ease;
+    font-size: 16px;
+  }
 
-	.hoverTitleToggle {
-		opacity: 1;
-	}
-
+  .hoverTitleToggle {
+    opacity: 1;
+  }
 }
 
 @media screen and (min-width: 1920px) {
-	
-	#workContainer h1 {
-		font-size: 36px;
-	}
+  #workContainer h1 {
+    font-size: 36px;
+  }
 
-	#workContainer p {
-		font-size: 24px;
-		line-height: 40px;
-	}
+  #workContainer p {
+    font-size: 24px;
+    line-height: 40px;
+  }
 
-	#workListContainer {
-		padding-bottom: 100px;
-	}
+  #workListContainer {
+    padding-bottom: 100px;
+  }
 
-	.hoverP {
-		font-size: 24px;
-		line-height: 30px;
-	}
+  .hoverP {
+    font-size: 24px;
+    line-height: 30px;
+  }
 
-	.hoverH2 {
-		font-size: 36px;
-		line-height: 44px;
-	}
+  .hoverH2 {
+    font-size: 36px;
+    line-height: 44px;
+  }
 }
 
 /* About */
@@ -779,789 +853,803 @@ nav {
 }
 
 #aboutContainer {
-	width: 90%;
-	margin: 0 auto;
-	padding-bottom: 50px;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 #aboutContainer pre {
-	padding-top: 7vh;
-	font-family: 'Wagner Condensed', sans-serif;
-	font-size: 40px;
-	width: 100%;
-	line-height: 50px;
+  padding-top: 7vh;
+  font-family: "Wagner Condensed", sans-serif;
+  font-size: 40px;
+  width: 100%;
+  line-height: 50px;
 }
 
 #aboutPara {
-	width: 100%;
+  width: 100%;
 }
 
 #aboutPara p {
-	font-family: 'Open Sans Light', sans-serif;
-	font-size: 16px;
-	line-height: 24px;
-	margin-top: 4vh; 
+  font-family: "Open Sans Light", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 4vh;
 }
 
 #aboutImages {
-	width: 100%;
-	position: relative;
-	margin-top: 20px;
-	/*display: none;*/
+  width: 100%;
+  position: relative;
+  margin-top: 20px;
+  /*display: none;*/
 }
 
 #aboutImages img {
-	position: relative;
-	display: block;
-	width: 100%;
-	margin: 0 auto;
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
 }
 
 #aboutImages h4 {
-	position: relative;
-	font-family: 'Raleway Light', sans-serif;
-	font-size: 12px;
-	opacity: .8;
-	width: 100%;
-	margin: 0 auto;
-	margin-top: 20px;
+  position: relative;
+  font-family: "Raleway Light", sans-serif;
+  font-size: 12px;
+  opacity: 0.8;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 20px;
 }
 
 #galleryButtons {
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	margin: 0 auto;
-	margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 20px;
 }
 
 .buttonsInact {
-	width: 2%;
-	margin-right: 31.3%;
-    height: 5px;
-    background-color: rgb(112,112,112);
-    opacity: .2;
-    transition: all 5.5s linear;
+  width: 2%;
+  margin-right: 31.3%;
+  height: 5px;
+  background-color: rgb(112, 112, 112);
+  opacity: 0.2;
+  transition: all 5.5s linear;
 }
 
 .active {
-	opacity: 1;
-	box-sizing: border-box;
-	width: 33.3%;
-	margin-right: 0%;
+  opacity: 1;
+  box-sizing: border-box;
+  width: 33.3%;
+  margin-right: 0%;
 }
 
 @media screen and (min-width: 768px) {
+  #aboutContainer pre {
+    padding-top: 6vh;
+  }
 
-	#aboutContainer pre {
-		padding-top: 6vh;
-	}
+  #aboutPara {
+    width: 38%;
+  }
 
-	#aboutPara {
-		width: 38%;
-	}
-
-	#aboutImages {
-		width: 50%;
-		display: block;
-	}
+  #aboutImages {
+    width: 50%;
+    display: block;
+  }
 }
 
 @media screen and (min-width: 1025px) {
+  #aboutContainer pre {
+    padding-top: 8vh;
+  }
 
-	#aboutContainer pre {
-		padding-top: 8vh;
-	}
+  #aboutContainer {
+    width: 70%;
+    padding-bottom: 100px;
+  }
 
-	#aboutContainer {
-		width: 70%;
-		padding-bottom: 100px;
-	}
+  #aboutPara {
+    width: 25%;
+  }
 
-	#aboutPara {
-		width: 25%;
-	}
+  #aboutImages {
+    width: 65%;
+  }
 
-	#aboutImages {
-		width: 65%;
-	}
+  #aboutImages img {
+    width: 80%;
+  }
 
-	#aboutImages img {
-		width: 80%;
-	}
+  #aboutImages h4 {
+    width: 80%;
+  }
 
-	#aboutImages h4 {
-		width: 80%;
-	}
+  #galleryButtons {
+    width: 80%;
+  }
 
-	#galleryButtons {
-		width: 80%;
-	}
-
-	/*.buttonsInact:hover {
+  /*.buttonsInact:hover {
 		opacity: 1;
 		transition: opacity .5s ease;
 	}*/
 }
 
 @media screen and (min-width: 1920px) {
-	
-	#aboutPara p {
-		font-size: 20px;
-		line-height: 36px;
-	}
+  #aboutPara p {
+    font-size: 20px;
+    line-height: 36px;
+  }
 
-	#aboutImages h4 {
-		font-size: 16px;
-	}
+  #aboutImages h4 {
+    font-size: 16px;
+  }
 
-	#aboutContainer pre {
-		font-size: 50px;
-		line-height: 60px;
-	}
+  #aboutContainer pre {
+    font-size: 50px;
+    line-height: 60px;
+  }
 }
 
 @media screen and (min-width: 2400px) {
+  #aboutPara p {
+    font-size: 24px;
+    line-height: 40px;
+  }
 
-	#aboutPara p {
-		font-size: 24px;
-		line-height: 40px;
-	}
-
-	#aboutImages h4 {
-		font-size: 20px;
-	}
+  #aboutImages h4 {
+    font-size: 20px;
+  }
 }
 
 /* Skills */
 
 #Skills {
-	display: flex;
-	flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #skillsSec {
-	box-sizing: border-box;
-	background-color: #E2E1E1;
-	width: 100%;
-	padding-left: 5%;
-	padding-right: 5%;
-	color: #1c1c1c;
-	padding-bottom: 20px;
+  box-sizing: border-box;
+  background-color: #e2e1e1;
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  color: #1c1c1c;
+  padding-bottom: 20px;
 }
 
 #eduSec {
-	box-sizing: border-box;
-	background-color: #1c1c1c;
-	width: 100%;
-	padding-left: 5%;
-	padding-right: 5%;
-	color: #ffffff;
+  box-sizing: border-box;
+  background-color: #1c1c1c;
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  color: #ffffff;
 }
 
 #Skills h1 {
-	font-family: 'Raleway Light', sans-serif;
-	font-size: 24px;
-	margin-top: 30px;
-	text-transform: uppercase;
-	letter-spacing: 2px;
+  font-family: "Raleway Light", sans-serif;
+  font-size: 24px;
+  margin-top: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 #skillsUnderline {
-	height: 1px;
-	background-color: #1c1c1c;
-	border: none;
-	opacity:.5;
-	margin-top: 10px;
+  height: 1px;
+  background-color: #1c1c1c;
+  border: none;
+  opacity: 0.5;
+  margin-top: 10px;
 }
 
 #eduUnderline {
-	height: 1px;
-	background-color: #fff;
-	border: none;
-	opacity: .5;
-	margin-top: 10px;
+  height: 1px;
+  background-color: #fff;
+  border: none;
+  opacity: 0.5;
+  margin-top: 10px;
 }
 
 #Skills h2 {
-	font-family: 'Open Sans', sans-serif;
-	color: #1c1c1c;
-	font-size: 20px;
-	margin-top: 20px;
+  font-family: "Open Sans", sans-serif;
+  color: #1c1c1c;
+  font-size: 20px;
+  margin-top: 20px;
 }
 
 .skillDivs {
-	margin-top: 20px;
-	display: flex;
-	flex-wrap: wrap;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .skillDivs div {
-	width: 50%;
-	font-family: 'Open Sans Light', sans-serif;
-	color: #1c1c1c;
+  width: 50%;
+  font-family: "Open Sans Light", sans-serif;
+  color: #1c1c1c;
 }
 
 .skillDivs p {
-	margin-bottom: 18px;
-	font-size: 14px;
+  margin-bottom: 18px;
+  font-size: 14px;
 }
 
 .eduDivs h3 {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 20px;
-	margin-top: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  margin-top: 20px;
 }
 
 .eduDivs p {
-	font-family: 'Open Sans Light', sans-serif;
-	margin-top: 20px;
-	font-size: 14px;
-	line-height: 20px;
+  font-family: "Open Sans Light", sans-serif;
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .eduDivs div {
-	margin-bottom: 45px;
+  margin-bottom: 45px;
 }
 
 @media screen and (min-width: 768px) {
-	
-	.skillDivs div {
-		width: 25%;
-	}
+  .skillDivs div {
+    width: 25%;
+  }
 }
 
 @media screen and (min-width: 1024px) {
-	#skillsSec {
-		width: 50%;
-	}
+  #skillsSec {
+    width: 50%;
+  }
 
-	#eduSec {
-		width: 50%;
-	}
+  #eduSec {
+    width: 50%;
+  }
 }
 
 @media screen and (min-width: 1025px) {
-	#skillsSec {
-		padding-left: 15%;
-	}
+  #skillsSec {
+    padding-left: 15%;
+  }
 
-	#eduSec {
-		padding-right: 15%;
-	}
+  #eduSec {
+    padding-right: 15%;
+  }
 }
 
 @media screen and (min-width: 1920px) {
-	
-	#Skills h1 {
-		font-size: 32px;
-	}
+  #Skills h1 {
+    font-size: 32px;
+  }
 
-	#Skills h2 {
-		font-size: 28px;
-	}
+  #Skills h2 {
+    font-size: 28px;
+  }
 
-	#Skills h3 {
-		font-size: 28px;
-	}
+  #Skills h3 {
+    font-size: 28px;
+  }
 
-	#Skills p {
-		font-size: 18px;
-	}
+  #Skills p {
+    font-size: 18px;
+  }
 }
 
 @media screen and (min-width: 2400px) {
-	
-	#Skills h1 {
-		font-size: 36px;
-	}
+  #Skills h1 {
+    font-size: 36px;
+  }
 
-	#Skills h2 {
-		font-size: 30px;
-	}
+  #Skills h2 {
+    font-size: 30px;
+  }
 
-	#Skills h3 {
-		font-size: 26px;
-	}
+  #Skills h3 {
+    font-size: 26px;
+  }
 
-	#Skills p {
-		font-size: 22px;
-	}
+  #Skills p {
+    font-size: 22px;
+  }
 }
 
 /* About */
 
 #Contact {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	box-sizing: border-box;
-	width: 90%;
-	margin: 0 auto;
-	padding-top: 7vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 7vh;
 }
 
 #Contact pre {
-	width: 100%;
-	color: #1c1c1c;
-	font-family: 'Wagner Condensed', sans-serif;
-	font-size: 35px;
-	line-height: 50px;
+  width: 100%;
+  color: #1c1c1c;
+  font-family: "Wagner Condensed", sans-serif;
+  font-size: 35px;
+  line-height: 50px;
 }
 
 #contactBlurb {
-	width: 100%;
-	margin-top: 25px;
+  width: 100%;
+  margin-top: 25px;
 }
 
 #contactBlurb p {
-	font-family: 'Open Sans Light', sans-serif;
-	color: #1c1c1c;
-	line-height: 25px;
-	margin-bottom: 25px;
+  font-family: "Open Sans Light", sans-serif;
+  color: #1c1c1c;
+  line-height: 25px;
+  margin-bottom: 25px;
 }
 
 #contactBlurb div {
-	height: 1px;
-	width: 100%;
-	background-color: #707070;
-	opacity: .2;
-	margin-bottom: 20px;
+  height: 1px;
+  width: 100%;
+  background-color: #707070;
+  opacity: 0.2;
+  margin-bottom: 20px;
 }
 
 #formDiv {
-	width: 100%;
-	margin-bottom: 30px;
-	box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 30px;
+  box-sizing: border-box;
 }
 
 #formDiv p {
-	padding: 10px;
-	color: #1c1c1c;
-	background-color: #E2E1E1;
-	font-family: 'Open Sans Light', sans-serif;
-	margin-bottom: 20px;
+  padding: 10px;
+  color: #1c1c1c;
+  background-color: #e2e1e1;
+  font-family: "Open Sans Light", sans-serif;
+  margin-bottom: 20px;
 }
 
 #formDiv label {
-	display: block;
-	font-family: 'Open Sans Light', sans-serif;
-	text-transform: uppercase;
-	font-size: 13px;
-	margin-bottom: 15px;
+  display: block;
+  font-family: "Open Sans Light", sans-serif;
+  text-transform: uppercase;
+  font-size: 13px;
+  margin-bottom: 15px;
 }
 
 #formDiv input {
-	border: none;
-	border-bottom: 1px solid rgba(112,112,112,.5);
-	display: block;
-	width: 100%;
-	margin-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid rgba(112, 112, 112, 0.5);
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 #formDiv textarea {
-	width: 100%;
-	border: 1px solid rgba(112,112,112,.5);
+  width: 100%;
+  border: 1px solid rgba(112, 112, 112, 0.5);
 }
 
 #formDiv input[type="submit"] {
-	width: 125px;
-	margin-top: 20px;
-	margin-bottom: 40px;
-	background-color: transparent;
-	border: 1px solid rgba(112,112,112,.5);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 30px;
-	font-family: 'Open Sans Light', sans-serif;
-	color: #1c1c1c;
-	text-transform: uppercase;
-	transition: all .5s ease;
+  width: 125px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  background-color: transparent;
+  border: 1px solid rgba(112, 112, 112, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  font-family: "Open Sans Light", sans-serif;
+  color: #1c1c1c;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
 }
 
 #formDiv input[type="submit"]:hover {
-	background-color: #1c1c1c;
-	color: #fff;
+  background-color: #1c1c1c;
+  color: #fff;
 }
 
 @media screen and (min-width: 768px) {
-	#Contact {
-		padding-top: 6vh;
-	}
+  #Contact {
+    padding-top: 6vh;
+  }
 }
 
 @media screen and (min-width: 1025px) {
+  #Contact {
+    width: 70%;
+    padding-top: 8vh;
+  }
 
-	#Contact {
-		width: 70%;
-		padding-top: 8vh;
-	}
+  #contactBlurb {
+    width: 35%;
+  }
 
-	#contactBlurb {
-		width: 35%;
-	}
-
-	#formDiv {
-		width: 55%;
-		margin-top: 25px;
-	}
+  #formDiv {
+    width: 55%;
+    margin-top: 25px;
+  }
 }
 
 @media screen and (min-width: 1920px) {
-	
-	#Contact pre {
-		font-size: 50px;
-		line-height: 60px;
-	}
+  #Contact pre {
+    font-size: 50px;
+    line-height: 60px;
+  }
 
-	#contactBlurb p {
-		font-size: 20px;
-		line-height: 36px;
-	}
+  #contactBlurb p {
+    font-size: 20px;
+    line-height: 36px;
+  }
 
-	#formDiv label {
-		font-size: 16px;
-		margin-bottom: 24px;
-	}
+  #formDiv label {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
 }
 
 @media screen and (min-width: 2400px) {
-	
-	#Contact pre {
-		font-size: 50px;
-		line-height: 60px;
-	}
+  #Contact pre {
+    font-size: 50px;
+    line-height: 60px;
+  }
 
-	#contactBlurb p {
-		font-size: 24px;
-		line-height: 40px;
-	}
+  #contactBlurb p {
+    font-size: 24px;
+    line-height: 40px;
+  }
 
-	#formDiv label {
-		font-size: 20px;
-		margin-bottom: 24px;
-	}
+  #formDiv label {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
 }
 
 #footer {
-	background-color: #1c1c1c;
+  background-color: #1c1c1c;
 }
 
 #footer img {
-	width: auto;
-	display: block;
-	margin: 0 auto;
-	padding-top: 20px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+  padding-top: 20px;
 }
 
 #footer p {
-	font-family: 'Open Sans Light', sans-serif;
-	color: #FFF;
-	text-align: center;
-	padding-top: 10px;
-	font-size: 13px;
-	opacity: .6;
+  font-family: "Open Sans Light", sans-serif;
+  color: #fff;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 13px;
+  opacity: 0.6;
 }
 
 #footer p:last-child {
-	padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 
-.fade-enter-active, .fade-leave-active {
+.fade-enter-active,
+.fade-leave-active {
   transition-property: opacity;
-  transition-duration: .4s;
+  transition-duration: 0.4s;
 }
 
 .fade-enter-active {
-  transition-delay: .4s;
+  transition-delay: 0.4s;
 }
 
-.fade-enter, .fade-leave-active {
-  opacity: 0
-}
-
-.fade-input-enter-active, .fade-input-leave-active {
-  transition-property: opacity;
-  transition-duration: .15s;
-}
-
-.fade-input-enter-active {
-  transition-delay: .15s;
-}
-
-.fade-input-enter, .fade-input-leave-active {
+.fade-enter,
+.fade-leave-active {
   opacity: 0;
 }
 
+.fade-input-enter-active,
+.fade-input-leave-active {
+  transition-property: opacity;
+  transition-duration: 0.15s;
+}
+
+.fade-input-enter-active {
+  transition-delay: 0.15s;
+}
+
+.fade-input-enter,
+.fade-input-leave-active {
+  opacity: 0;
+}
 
 /* Individual Work */
 
 .workHeaderImg {
-	width: 100%;
-	height: 200px;
-	margin-top: 40px;
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
+  width: 100%;
+  height: 200px;
+  margin-top: 40px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .workTitleDiv {
-	width: 100%;
-	margin: 0 auto;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 20px;
 }
 
 .workTitleDiv h2 {
-	text-transform: uppercase;
-	font-family: 'Wagner Condensed', sans-serif;
-	font-weight: 100;
-	padding-top: 20px;
-	font-size: 25px;
-	color: #1c1c1c;
-	line-height: 30px;
+  text-transform: uppercase;
+  font-family: "Wagner Condensed", sans-serif;
+  font-weight: 100;
+  padding-top: 20px;
+  font-size: 25px;
+  color: #1c1c1c;
+  line-height: 30px;
+  width: 100%;
+}
+
+.workTitleDiv div {
+  width: 100%;
+  padding-top: 20px;
+}
+
+.workTitleDiv p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-size: 19px;
+  color: #1c1c1c;
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.15); */
+  padding-top: 12px;
+  padding-bottom: 10px;
+  display: inline;
+}
+
+.workTitleDiv img {
+  margin-left: 25px;
+  width: 25px;
+  height: auto;
 }
 
 .workContDiv {
-	width: 100%;
-	margin: 0 auto;
-	margin-top: 15px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 15px;
 }
 
 .workContDiv h3 {
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 500;
-	font-size: 19px;
-	color: #1c1c1c;
-	line-height: 24px;
-	/*text-transform: uppercase;*/
-	padding-bottom: 10px;
-	border-bottom: 1px solid rgba(0,0,0, .15);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-size: 19px;
+  color: #1c1c1c;
+  line-height: 24px;
+  /*text-transform: uppercase;*/
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 .workContDiv p {
-	font-family: 'Open Sans Light', sans-serif;
-	font-size: 16px;
-	padding-top: 12px;
-	padding-bottom: 10px;
-	font-weight: 350;
-	line-height: 28px;
-	color: #1c1c1c;
+  font-family: "Open Sans Light", sans-serif;
+  font-size: 16px;
+  padding-top: 12px;
+  padding-bottom: 10px;
+  font-weight: 350;
+  line-height: 28px;
+  color: #1c1c1c;
 }
 
 .workContDiv h5 {
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 500;
-	font-size: 19px;
-	color: #1c1c1c;
-	padding-top: 15px;
-	padding-bottom: 10px;
-	border-bottom: 1px solid rgba(0,0,0, .15);
-	/*text-transform: uppercase;*/
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-size: 19px;
+  color: #1c1c1c;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  /*text-transform: uppercase;*/
 }
 
 .mockupDiv {
-	width: 100%;
-	margin: 0 auto;
-	margin-top: 30px;
-	transition: left 1.1s ease, opacity 1.3s ease .6s;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 30px;
+  transition: left 1.1s ease, opacity 1.3s ease 0.6s;
 }
 
 #objectiveText {
-	transition: right 1.1s ease, opacity 1.3s ease .6s;
+  transition: right 1.1s ease, opacity 1.3s ease 0.6s;
 }
 
 .mockupDiv img {
-	width: 100%;
+  width: 100%;
 }
 
 .forwardDiv {
-	padding-top: 40px;
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	margin: 0 auto;
-	padding-bottom: 30px;
+  padding-top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding-bottom: 30px;
 }
 
 .forwardDiv a {
-	text-decoration: none;
-	color: #1c1c1c;
-	font-family: 'Open Sans', sans-serif;
-	border-bottom: 1px solid #707070;
-	padding-bottom: 10px;
-	transition: all .4s ease;
+  text-decoration: none;
+  color: #1c1c1c;
+  font-family: "Open Sans", sans-serif;
+  border-bottom: 1px solid #707070;
+  padding-bottom: 10px;
+  transition: all 0.4s ease;
 }
 
 .forwardDiv a:hover {
-	color: black;
-	border-bottom: 1px solid black;
+  color: black;
+  border-bottom: 1px solid black;
 }
 
 .indWorkCont {
-	width:85%;
-	margin: 0 auto;
+  width: 85%;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 768px) {
-	
-	.workHeaderImg {
-		height: 300px;
-	}
+  .workHeaderImg {
+    height: 300px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
-	
-	.workContDiv h3 {
-		font-size: 22px;
-	}
+  .workContDiv h3 {
+    font-size: 22px;
+  }
 
-	.workContDiv h5 {
-		font-size: 22px;
-	}
+  .workContDiv h5 {
+    font-size: 22px;
+  }
 
-	.workContDiv p {
-		font-size: 16px;
-	}
+  .workContDiv p {
+    font-size: 16px;
+  }
 
-	.workTitleDiv h2 {
-		font-size: 30px;
-		padding-top: 35px;
-	}
+  .workTitleDiv h2 {
+    font-size: 30px;
+    padding-top: 35px;
+  }
 }
 
 @media screen and (min-width: 1025px) {
+  .workTitleDiv {
+    margin-bottom: 50px;
+  }
 
-	.workTitleDiv {
-		margin-bottom: 50px;
-	}
+  .workHeaderImg {
+    width: 70%;
+    /*height: 400px;*/
+    margin: 0 auto;
+    margin-top: 40px;
+    background-size: cover;
+  }
 
-	.workHeaderImg {
-		width: 70%;
-		/*height: 400px;*/
-		margin: 0 auto;
-		margin-top: 40px;
-		background-size: cover;
-	}
+  .indWorkCont {
+    width: 70%;
+    max-width: 70vw;
+    overflow-x: hidden;
+  }
 
-	.indWorkCont {
-		width: 70%;
-		max-width: 70vw;
-		overflow-x: hidden;
-	}
+  #broadText {
+    width: 70%;
+    float: right;
+  }
 
-	#broadText {
-		width: 70%;
-		float: right;
-	}
+  #objectiveText {
+    width: 30%;
+    margin-right: 10%;
+    float: right;
+    margin-top: 150px;
+    position: relative;
+    right: -1000px;
+    opacity: 0;
+  }
 
-	#objectiveText {
-		width: 30%;
-		margin-right: 10%;
-		float: right;
-		margin-top: 150px;
-		position: relative;
-		right: -1000px;
-		opacity: 0;
-	}
+  #techText {
+    float: left;
+    width: 20%;
+  }
 
-	#techText {
-		float: left;
-		width: 20%;
-	}
+  #projText {
+    margin-top: 20px;
+  }
 
-	#projText {
-		margin-top: 20px;
-	}
+  .workContDiv h5 {
+    padding-top: 0;
+  }
 
-	.workContDiv h5 {
-		padding-top: 0;
-	}
+  .forwardDiv {
+    margin-bottom: 60px;
+  }
 
-	.forwardDiv {
-		margin-bottom: 60px;
-	}
+  .forwardDiv a {
+    border-bottom: 1px solid transparent;
+  }
 
-	.forwardDiv a {
-		border-bottom: 1px solid transparent;
-	}
+  .mockupDiv {
+    width: 50%;
+    float: left;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    position: relative;
+    left: -1000px;
+    opacity: 0;
+  }
 
-	.mockupDiv {
-		width: 50%;
-		float: left;
-		margin-top: 60px;
-		margin-bottom: 50px;
-		position: relative;
-		left: -1000px;
-		opacity: 0;
-	}
+  .mockupDiv img {
+    width: 100%;
+  }
 
-	.mockupDiv img {
-		width: 100%;
-	}
+  .workTitleDiv h2 {
+    font-size: 30px;
+  }
 
-	.workTitleDiv h2 {
-		font-size: 30px;
-	}
+  .workContDiv h3 {
+    font-size: 18px;
+  }
 
-	.workContDiv h3 {
-		font-size: 18px;
-	}
-
-	.workContDiv h5 {
-		font-size: 18px;
-	}
+  .workContDiv h5 {
+    font-size: 18px;
+  }
 }
 
 @media screen and (min-width: 1920px) {
-	
-	.workTitleDiv h2 {
-		font-size: 56px;
-		padding-top: 50px;
-	}
+  .workTitleDiv h2 {
+    font-size: 56px;
+    padding-top: 50px;
+  }
 
-	.workContDiv h3 {
-		font-size: 26px;
-	}
+  .workContDiv h3 {
+    font-size: 26px;
+  }
 
-	.workContDiv h5 {
-		font-size: 28px;
-	}
+  .workContDiv h5 {
+    font-size: 28px;
+  }
 
-	.workContDiv p {
-		font-size: 20px;
-		line-height: 36px;
-	}
+  .workContDiv p {
+    font-size: 20px;
+    line-height: 36px;
+  }
 
-	.forwardDiv a {
-		font-size: 20px;
-	}
+  .forwardDiv a {
+    font-size: 20px;
+  }
 }
 
 @media screen and (min-width: 2400px) {
-	
-	.workTitleDiv h2 {
-		font-size: 56px;
-		padding-top: 50px;
-	}
+  .workTitleDiv h2 {
+    font-size: 56px;
+    padding-top: 50px;
+  }
 
-	.workContDiv h3 {
-		font-size: 28px;
-	}
+  .workContDiv h3 {
+    font-size: 28px;
+  }
 
-	.workContDiv h5 {
-		font-size: 28px;
-	}
+  .workContDiv h5 {
+    font-size: 28px;
+  }
 
-	.workContDiv p {
-		font-size: 24px;
-		line-height: 40px;
-	}
+  .workContDiv p {
+    font-size: 24px;
+    line-height: 40px;
+  }
 
-	.forwardDiv a {
-		font-size: 24px;
-	}
+  .forwardDiv a {
+    font-size: 24px;
+  }
 }
-

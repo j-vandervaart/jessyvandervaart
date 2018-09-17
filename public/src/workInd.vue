@@ -5,6 +5,11 @@
     <div class="indWorkCont">
       <div class="workTitleDiv">
         <h2>{{work.project_name}}</h2>
+        <div>
+          <p>View Project:</p>
+          <a v-bind:href="`${work.github}`" target="_blank"><img src="/images/github-logo.svg" alt=""></a>
+          <a v-if="work.link != ''" v-bind:href="`${work.link}`" target="_blank"><img src="/images/link.svg" alt=""></a>
+        </div>
       </div>
       <div class="workContDiv">
         <div id="broadText">
@@ -36,75 +41,77 @@
 </template>
 
 <script>
-    export default {
-        name: 'work',
-        data() {
-          return {
-            work: {},
-            next: ["campers-guide", "pionear", "pionear-promotional-site", "scifi-tv"],
-            test: ''
-          }
-        },
-        created() {
-          var vm = this;
-          var test = this.$route.params.proj_id;
-          // console.log(test);
-          axios.get(`/api/work/${test}`).then(function(response) {
-            vm.work = response.data;
-            // console.log(response);
-            var index = vm.next.findIndex(x => x == response.data.proj_id);
-            vm.test = index;
-          });
-          window.addEventListener('scroll', this.workScroll);
-        },
-        methods: {
-          goNext: function() {
-            
-            this.test = this.test + 1;
-            if(this.test == 4) {
-              this.test = 0;
-            }
-            // console.log(this.next[this.test]);
-            this.$router.push(''+this.next[this.test]);
-          },
-          goBack: function() {
-            this.test = this.test - 1;
-            if(this.test == -1) {
-              this.test = 3;
-            }
-            // console.log(this.next[this.test]);
-            this.$router.push(''+this.next[this.test]);
-          },
-          workScroll: function() {
-            if(window.innerWidth > 1024) {
-              // console.log(window.innerHeight);
-              // console.log(this.$el.querySelector(".mockupDiv").getBoundingClientRect().top);
-              if((window.innerHeight - this.$el.querySelector(".mockupDiv").getBoundingClientRect().top) > 30) {
-                this.$el.querySelector(".mockupDiv").style.left = "0px";
-                this.$el.querySelector(".mockupDiv").style.opacity = "1";
-                this.$el.querySelector("#objectiveText").style.right = "0px";
-                this.$el.querySelector("#objectiveText").style.opacity = "1";
-              }
-            }
-          }
-        },
-        watch: {
-              $route ({params}) {
-                var vm = this;
-                axios.get(`/api/work/${params.proj_id}`).then(function(response) {
-                  vm.work = response.data;
-                });
-                if(window.innerWidth > 1024) {
-                  this.$el.querySelector(".mockupDiv").style.left = "-1000px";
-                  this.$el.querySelector(".mockupDiv").style.opacity = "0";
-                  this.$el.querySelector("#objectiveText").style.right = "-1000px";
-                  this.$el.querySelector("#objectiveText").style.opacity = "0";
-                }
-            }
+export default {
+  name: "work",
+  data() {
+    return {
+      work: {},
+      next: ["campers-guide", "pionear", "scifi-tv", "fx-coating"],
+      test: ""
+    };
+  },
+  created() {
+    var vm = this;
+    var test = this.$route.params.proj_id;
+    // console.log(test);
+    axios.get(`/api/work/${test}`).then(function(response) {
+      vm.work = response.data;
+      // console.log(response);
+      var index = vm.next.findIndex(x => x == response.data.proj_id);
+      vm.test = index;
+    });
+    window.addEventListener("scroll", this.workScroll);
+  },
+  methods: {
+    goNext: function() {
+      this.test = this.test + 1;
+      if (this.test == 4) {
+        this.test = 0;
+      }
+      // console.log(this.next[this.test]);
+      this.$router.push("" + this.next[this.test]);
+    },
+    goBack: function() {
+      this.test = this.test - 1;
+      if (this.test == -1) {
+        this.test = 3;
+      }
+      // console.log(this.next[this.test]);
+      this.$router.push("" + this.next[this.test]);
+    },
+    workScroll: function() {
+      if (window.innerWidth > 1024) {
+        // console.log(window.innerHeight);
+        // console.log(this.$el.querySelector(".mockupDiv").getBoundingClientRect().top);
+        if (
+          window.innerHeight -
+            this.$el.querySelector(".mockupDiv").getBoundingClientRect().top >
+          30
+        ) {
+          this.$el.querySelector(".mockupDiv").style.left = "0px";
+          this.$el.querySelector(".mockupDiv").style.opacity = "1";
+          this.$el.querySelector("#objectiveText").style.right = "0px";
+          this.$el.querySelector("#objectiveText").style.opacity = "1";
         }
+      }
     }
+  },
+  watch: {
+    $route({ params }) {
+      var vm = this;
+      axios.get(`/api/work/${params.proj_id}`).then(function(response) {
+        vm.work = response.data;
+      });
+      if (window.innerWidth > 1024) {
+        this.$el.querySelector(".mockupDiv").style.left = "-1000px";
+        this.$el.querySelector(".mockupDiv").style.opacity = "0";
+        this.$el.querySelector("#objectiveText").style.right = "-1000px";
+        this.$el.querySelector("#objectiveText").style.opacity = "0";
+      }
+    }
+  }
+};
 </script>
 
 <style lang="scss">
-
 </style>
